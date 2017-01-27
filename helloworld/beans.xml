@@ -7,7 +7,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <bean id="traveller"  class="com.niit.di.Traveller">
 <property name="KmTravelled" value="10"></property>
-<property name="vehicle"  ref="auto"></property> <!-- dependency injection -->
+<property name="vehicle"  ref="car"></property> <!-- dependency injection -->
 </bean>
 <bean id="car" class="com.niit.di.Car">
 <property name="costPerKm" value="120"></property>

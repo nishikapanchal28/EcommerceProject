@@ -8,7 +8,7 @@ public class Helloworldcontroller {
 	
 	@RequestMapping("/")
 	public ModelAndView helloWorld(){
-		return new ModelAndView("index","message","WELCOME TO SPRING MVC FRAMEWORK");
+		return new ModelAndView("home","message","WELCOME TO SPRING MVC FRAMEWORK");
 
 }
 }
