@@ -9,9 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Name :${personObj.name}<br>
-Email:${personObj.email}<br>
-MobileNumber :${personObj.mobile}<br>
+Name:${personObj.name}<br>
+Password:${personObj.password}<br>
 <a href="home">CLICK HERE TO GO BACK TO HOME PAGE</a>
 </body>
 </html>

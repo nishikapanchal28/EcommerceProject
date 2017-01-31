@@ -8,7 +8,42 @@
 <title>register page </title>
 </head>
 <body>
-<b>if you are new register !!!!! register yourself...</b>
+ <div class="container">
+  <form:form action="addPerson" commandName="person" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="firstname">Firstname:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="firstname" placeholder="Enter first name"/>
+      </div>
+    </div>
+    
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Lastname:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="lastname" placeholder="Enter last name"/>
+      </div>
+    </div>
+   
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Email:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="lastname" placeholder="Enter last name"/>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Mobile:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="lastname" placeholder="Enter last name"/>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">create password:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="lastname" placeholder="Enter last name"/>
+      </div>
+    </div>
+    
+    </form:form>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

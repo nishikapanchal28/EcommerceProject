@@ -28,7 +28,7 @@
     </div>
   </div>
 </form>
-      <li><a href="getproductdetails">Product</a></li>
+      <li><a href="getproductdetails">Add New Product</a></li>
       <li><a href="getpersondetails">Login</a></li>
       <li><a href="register">Register</a></li>
     </ul>
