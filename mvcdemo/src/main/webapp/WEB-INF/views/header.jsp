@@ -30,7 +30,7 @@
 </form>
       <li><a href="getproductdetails">Add New Product</a></li>
       <li><a href="getpersondetails">Login</a></li>
-      <li><a href="register">Register</a></li>
+      <li><a href="getregistrationdetails">Register</a></li>
     </ul>
   </div>
 </nav>

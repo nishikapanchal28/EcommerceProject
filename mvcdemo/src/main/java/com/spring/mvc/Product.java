@@ -1,12 +1,32 @@
 package com.spring.mvc;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="product")
+//Table Name: product
+//primary key: id
+// name,
 public class Product {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+private int id;
 private String productname;
 private String manufacturerename;
-private String price;
+private double price;
 private String quantity;
 private String totalPrice;
 
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
 public String getTotalPrice() {
 	return totalPrice;
 }
@@ -25,10 +45,11 @@ public String getManufacturerename() {
 public void setManufacturerename(String manufacturerename) {
 	this.manufacturerename = manufacturerename;
 }
-public String getPrice() {
+
+public double getPrice() {
 	return price;
 }
-public void setPrice(String price) {
+public void setPrice(double price) {
 	this.price = price;
 }
 public String getQuantity() {
