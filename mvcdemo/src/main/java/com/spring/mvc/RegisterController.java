@@ -17,7 +17,7 @@ public ModelAndView getdisplayregister(@ModelAttribute("register") Register regi
 }
 @RequestMapping("/getregistrationdetails")
 public String getdisplayregister(Model model){
- model.addAttribute("rigister", new Register());
+ model.addAttribute("register", new Register());
 	return "register";
 }
 }

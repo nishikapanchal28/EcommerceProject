@@ -44,6 +44,12 @@
     <artifactId>hibernate-core</artifactId>
     <version>5.2.5.Final</version>
 </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>4.3.6.RELEASE</version>
+</dependency>
     
   </dependencies>
   <build>

@@ -12,7 +12,7 @@
   </head>
 <body>
 <div class="container">
-<form:form action="processproduct" commandName="product" class="form-horizontal">
+<form:form action="addproduct" commandName="product" class="form-horizontal">
 <div class="form-group">
       <label class="control-label col-sm-2" for="productname">Product Name:</label>
       <div class="col-sm-10">

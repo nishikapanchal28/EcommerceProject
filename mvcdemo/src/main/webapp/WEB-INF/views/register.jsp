@@ -20,14 +20,12 @@
         <form:input class="form-control" path="firstname" placeholder="Enter first name"/>
       </div>
     </div>
-    
       <div class="form-group">
       <label class="control-label col-sm-2" for="lastname">Last name:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="lastname" placeholder="Enter last name"/>
       </div>
     </div>
-   
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Email:</label>
       <div class="col-sm-10">

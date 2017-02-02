@@ -12,10 +12,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">PROJECT</a>
+      <a class="navbar-brand" >PROJECT</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home">Home</a></li>
+      <li class="active">
+      <li><a href="home">Home</a></li>
       <li><a href="contact">Contact us</a></li>
       <li><a href="about">About us</a></li>
       <form class="navbar-form navbar-left">
@@ -28,9 +29,9 @@
     </div>
   </div>
 </form>
-      <li><a href="getproductdetails">Add New Product</a></li>
-      <li><a href="getpersondetails">Login</a></li>
-      <li><a href="getregistrationdetails">Register</a></li>
+      <li><a href="productdetails">Add New Product</a></li>
+      <li><a href="getpersondetails"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+      <li><a href="getregistrationdetails"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
     </ul>
   </div>
 </nav>
