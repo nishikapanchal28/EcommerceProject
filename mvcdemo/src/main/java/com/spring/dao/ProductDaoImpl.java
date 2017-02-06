@@ -14,11 +14,13 @@ public class ProductDaoImpl implements ProductDao{
 		System.out.println("creating productDaoimpl instance");
 	}
  public Product saveProduct(Product product){
+		System.out.println(product.getId());
   Session session=sessionFactory.openSession();
-	System.out.println(product.getId());
+
 	session.save(product);
 	session.flush();
 	session.close();
+	
 	System.out.println(product.getId());
 	return product;
  }

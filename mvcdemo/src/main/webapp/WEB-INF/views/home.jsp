@@ -24,7 +24,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/138.JPG" alt="" width="800" height="400">
+        <img src="resources/images/Bags-06.jpg" alt="" width="800" height="400">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="item">
-        <img src="resources/images/102.JPG" alt="" width="800" height="400">
+        <img src="resources/images/Black-Leather-Handbags.jpg" alt="" width="800" height="400">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -40,15 +40,52 @@
       </div>
     
       <div class="item">
-        <img src="resources/images/137.JPG" alt="" width="800" height="400">
+        <img src="resources/images/hand-bag-1.jpg" alt="" width="800" height="400">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
         </div>
       </div>
-
+<div class="item">
+        <img src="resources/images/mens-weekend-bags-03132016.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div><div class="item">
+        <img src="resources/images/rucksacks-045.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div><div class="item">
+        <img src="resources/images/stock_handbags_540x242.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div><div class="item">
+        <img src="resources/images/Stylish-Travel-Bags-for-Men.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div><div class="item">
+        <img src="resources/images/travel-bag-packs-500x500.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
       <div class="item">
-        <img src="resources/images/105.JPG" alt="" width="800" height="400">
+        <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="800" height="400">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="resources/images/img-1.jpg" alt="" width="800" height="400">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>

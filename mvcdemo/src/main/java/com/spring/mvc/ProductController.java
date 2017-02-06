@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.mvc.Product;
 import com.spring.service.ProductService;
 
 @Controller
@@ -17,14 +18,15 @@ public class ProductController {
 public ProductController(){
 	System.out.println("creating product controller");
 }
-@RequestMapping("/admin/product/addproduct")
-public ModelAndView saveProduct(@ModelAttribute(value="product") Product product){
-	Product newProduct=productService.saveProduct(product);
-	return new ModelAndView("productList","product", newProduct);
-}
-@RequestMapping("/admin/product/productdetails")
+@RequestMapping("/productdetails")
 public String getproductdetails(Model model){
  model.addAttribute("product", new Product());
  return "productdetails";
 	}
+@RequestMapping("/addproduct")
+public ModelAndView saveProduct(@ModelAttribute(value="product") Product product){
+	Product newProduct=productService.saveProduct(product);
+	return new ModelAndView("productList","product", newProduct);
+}
+
 }

@@ -15,9 +15,10 @@
         <property name="username" value="sa"/>
         <property name="password" value="" />
     </bean>
-<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-<property name="datasource" ref="datasource"></property>
-<property name="hibernateProperties" >
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties" >
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>             
@@ -28,11 +29,12 @@
         <property name="annotatedClasses"><!--  Entities -->
             <list>
                <value>com.spring.mvc.Product</value>
+                <value>com.spring.mvc.Category</value>
             </list>
         </property>
-</bean>
- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        
+    </bean>
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
-
-</beans>       
+    </beans>

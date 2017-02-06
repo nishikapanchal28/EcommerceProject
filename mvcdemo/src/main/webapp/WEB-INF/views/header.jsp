@@ -29,7 +29,7 @@
     </div>
   </div>
 </form>
-      <li><a href="productdetails">Add New Product</a></li>
+      <li><a href="addproduct">Add New Product</a></li>
       <li><a href="getpersondetails"><span class="glyphicon glyphicon-user"></span>Login</a></li>
       <li><a href="getregistrationdetails"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
     </ul>
