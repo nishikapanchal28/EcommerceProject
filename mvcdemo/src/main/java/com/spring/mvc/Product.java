@@ -1,13 +1,19 @@
 package com.spring.mvc;
 
+
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
+
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name="product")
@@ -18,10 +24,16 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
+	@NotEmpty(message="product name is mandatory")
 private String productname;
+	@NotEmpty(message="manufacturer name is mandatory")
 private String manufacturerename;
+	@Min(value=10)
 private double price;
+	@Min(value=5)
 private String quantity;
+	@NotEmpty(message="mfg date is mandatory")
+private Date mfg;
 private String totalPrice;
 @ManyToOne
 @JoinColumn(name="cid")
@@ -71,5 +83,10 @@ public void setQuantity(String quantity) {
 	this.quantity = quantity;
 }
 
-
+public Date getMfg() {
+	return mfg;
+}
+public void setMfg(Date mfg) {
+	this.mfg = mfg;
+}
 }

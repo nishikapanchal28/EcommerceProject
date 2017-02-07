@@ -10,7 +10,7 @@ public class ProductServiceImpl implements ProductService{
 	public ProductDao productDao;
 	
 	public ProductServiceImpl(){
-	System.out.println("creating productseviceimpl instance");
+	System.out.println("creating productseviceimpl ");
 	}
 
 public Product saveProduct(Product product){
