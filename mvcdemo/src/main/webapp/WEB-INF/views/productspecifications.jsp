@@ -5,20 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Contact us</title>
-<style type="text/css">
-.container {
-    padding: 80px 120px;
-}
-</style>
+<title>Insert title here</title>
 </head>
 <body>
-<div class="container text-center">
-<b>welcome !!!! for any query contact here .....thanks !!!!</b>
-</div>
-
-
-
+here you can see the specifications for the product
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

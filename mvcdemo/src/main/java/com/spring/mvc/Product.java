@@ -1,6 +1,7 @@
 package com.spring.mvc;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -20,7 +22,12 @@ import org.hibernate.validator.constraints.NotEmpty;
 //Table Name: product
 //primary key: id
 // name,
-public class Product {
+public class Product implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8400757431876965889L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
@@ -32,9 +39,10 @@ private String manufacturerename;
 private double price;
 	@Min(value=5)
 private String quantity;
-	@NotEmpty(message="mfg date is mandatory")
+	@NotNull(message="mfg date is mandatory")
 private Date mfg;
-private String totalPrice;
+private String description;
+
 @ManyToOne
 @JoinColumn(name="cid")
 private Category category;
@@ -51,11 +59,11 @@ public int getId() {
 public void setId(int id) {
 	this.id = id;
 }
-public String getTotalPrice() {
-	return totalPrice;
+public String getDescription() {
+	return description;
 }
-public void setTotalPrice(String totalPrice) {
-	this.totalPrice = totalPrice;
+public void setDescription(String description) {
+	this.description = description;
 }
 public String getProductname() {
 	return productname;

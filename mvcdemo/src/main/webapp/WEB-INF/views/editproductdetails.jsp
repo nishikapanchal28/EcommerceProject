@@ -26,7 +26,7 @@ $('input[name=mfg]').datepicker({
 <form:form action="addproduct" commandName="product" method="POST" class="form-horizontal">
 <div class="form-group">
 <label for="id"></label>
-<form:hidden  path=""/>
+<form:hidden  path="id"/>
 </div>
 <div class="form-group">
       <label class="control-label col-sm-2" for="productname">Product Name:</label>
@@ -74,7 +74,7 @@ out.println(c.categoryDetails);-->
 <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-<input type="submit" value="Add Product" class="btn btn-default">
+<input type="submit" value="EDIT Product" class="btn btn-default">
 </div>
 </div>
     </form:form>
