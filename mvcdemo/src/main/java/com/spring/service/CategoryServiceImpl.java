@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.dao.CategoryDao;
-import com.spring.mvc.Category;
+import com.spring.model.Category;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{

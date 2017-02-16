@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.dao.ProductDao;
-import com.spring.mvc.Product;
+import com.spring.model.Product;
 
 @Service
 @Transactional
@@ -23,16 +23,10 @@ public class ProductServiceImpl implements ProductService {
 		 productDao.saveProduct(product);
 	}
 
-	public List<Product> getAllProducts() {
-		return productDao.getAllProducts();
+	public List<Product> ListAllProducts() {
+		return productDao.ListAllProducts();
 	}
 
-	public Product getProductById(int id) {
-		return productDao.getProductById(id);
-	}
-	public void deleteProduct(int id){
-		productDao.deleteProduct(id);
-	}
 
 	@Override
 	public Product getById(int id) {
@@ -43,6 +37,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void deleteProduct(Product p) {
 		productDao.deleteProduct(p);
+		
+	}
+
+	@Override
+	public void updateProduct(Product p) {
+	productDao.updateProduct(p);
 		
 	}
 }

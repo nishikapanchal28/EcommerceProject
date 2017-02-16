@@ -33,8 +33,14 @@
 		</property>
 		<property name="annotatedClasses"><!-- Entities -->
 			<list>
-				<value>com.spring.mvc.Product</value>
-				<value>com.spring.mvc.Category</value>
+				<value>com.spring.model.Product</value>
+				<value>com.spring.model.Category</value>
+				<value>com.spring.model.Users</value>
+				<value>com.spring.model.Customer</value>
+				<value>com.spring.model.Cart</value>
+				<value>com.spring.model.BillingAddress</value>
+				<value>com.spring.model.ShippingAddress</value>
+				<value>com.spring.model.Authorities</value>
 			</list>
 		</property>
 

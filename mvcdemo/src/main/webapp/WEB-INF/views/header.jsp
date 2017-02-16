@@ -13,6 +13,11 @@
          rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
   </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -25,20 +30,26 @@
       <li><a href="home">Home</a></li>
       <li><a href="contact">Contact us</a></li>
       <li><a href="about">About us</a></li>
-      <form class="navbar-form navbar-left">
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search">
-    <div class="input-group-btn">
-      <button class="btn btn" type="submit">
-        <i class="glyphicon glyphicon-search"></i>
-      </button>
-    </div>
-  </div>
-</form>
+
       <li><a href="productdetails">Add New Product</a></li>
-      <li><a href="getallproducts">View All Products</a>
+      <li><a href="listofproducts">View All Products</a>
       <li><a href="getpersondetails"><span class="glyphicon glyphicon-user"></span>Login</a></li>
       <li><a href="getregistrationdetails"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+      <li class="dropdown">
+			<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                     Select by Category<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			<c:url var="url1" value="/productsByCategory?searchCondition=New Arrivals"></c:url>
+			<li><a href="${url1}">New Arrivals</a></li>
+			<c:url var="url2" value="/productsByCategory?searchCondition=Sales"></c:url>
+			<li><a href="${url2}">Sales</a></li>
+			
+			<c:url var="url_3" value="/productsByCategory?searchCondition=Genreal"></c:url>
+			<li><a href="${url_3}">General </a></li>
+			
+			
+			</ul>
+			</li>
     </ul>
   </div>
 </nav>

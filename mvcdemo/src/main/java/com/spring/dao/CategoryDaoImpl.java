@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.spring.mvc.Category;
+import com.spring.model.Category;
 @Repository
 public class CategoryDaoImpl implements CategoryDao{
 	@Autowired

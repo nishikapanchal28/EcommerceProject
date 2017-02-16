@@ -23,7 +23,7 @@ $('input[name=mfg]').datepicker({
 <body>
 <div class="container">
 <c:url value="/addproduct" var="url"></c:url>
-<form:form action="addproduct" commandName="product" method="POST" class="form-horizontal">
+<form:form action="addproduct" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
 <div class="form-group">
 <label for="id"></label>
 <form:hidden  path=""/>
@@ -71,6 +71,11 @@ out.println(c.categoryDetails);-->
 </c:forEach>
 
 </div>
+  <div class="form-group">
+      <label for="image">Image</label>
+      <form:input path="images" type="file"/>
+    </div>
+
 <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">

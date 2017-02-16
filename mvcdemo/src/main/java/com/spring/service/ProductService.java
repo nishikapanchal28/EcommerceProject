@@ -2,18 +2,19 @@ package com.spring.service;
 
 import java.util.List;
 
-import com.spring.mvc.Product;
+import com.spring.model.Product;
 
 public interface ProductService {
 	
 	public void saveProduct(Product product);
 
-	List<Product> getAllProducts();
+	List<Product> ListAllProducts();
 
-	Product getProductById(int id);
-	void deleteProduct(int id);
+
 
 	public Product getById(int id);
 
 	public void deleteProduct(Product p);
+
+	public void updateProduct(Product p);
 }

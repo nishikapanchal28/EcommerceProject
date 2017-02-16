@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.spring.mvc.Product;
+import com.spring.model.Product;
 
 @Repository
 @Transactional
@@ -32,29 +32,13 @@ public class ProductDaoImpl implements ProductDao {
 		sessionFactory.getCurrentSession().save(product);
 	}
 
-	public List<Product> getAllProducts() {
+	public List<Product> ListAllProducts() {
 		Session session = sessionFactory.openSession();
 		Query query = session.createQuery("from Product");
 		List<Product> products = query.list();
 		session.close();
 		return products;
 	}
-
-	public Product getProductById(int id) {
-		Session session = sessionFactory.openSession();
-		// select * from product where id=34
-		Product product = (Product) session.get(Product.class, id);
-		session.close();
-		return product;
-	}
-	public void deleteProduct(int id){
-		Session session=sessionFactory.openSession();
-		Product product = (Product) session.get(Product.class, id);
-		session.delete(product);
-		session.flush();
-		session.close();
-	}
-
 	@Override
 	public Product getById(int id) {
 		return sessionFactory.getCurrentSession().get(Product.class, id);
@@ -63,6 +47,12 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public void deleteProduct(Product p) {
 		sessionFactory.getCurrentSession().delete(p);
+		
+	}
+
+	@Override
+	public void updateProduct(Product p) {
+	sessionFactory.getCurrentSession().update(p);
 		
 	}
 }

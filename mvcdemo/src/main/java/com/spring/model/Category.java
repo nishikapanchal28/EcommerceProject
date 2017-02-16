@@ -1,4 +1,4 @@
-package com.spring.mvc;
+package com.spring.model;
 
 import java.util.List;
 

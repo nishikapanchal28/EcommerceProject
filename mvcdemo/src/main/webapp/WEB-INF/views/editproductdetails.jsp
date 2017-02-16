@@ -22,18 +22,23 @@ $('input[name=mfg]').datepicker({
 </head>
 <body>
 <div class="container">
-<c:url value="/addproduct" var="url"></c:url>
-<form:form action="addproduct" commandName="product" method="POST" class="form-horizontal">
+<form:form action="editProduct/${product.id}" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
 <div class="form-group">
 <label for="id"></label>
 <form:hidden  path="id"/>
 </div>
 <div class="form-group">
-      <label class="control-label col-sm-2" for="productname">Product Name:</label>
+      <label class="control-label col-sm-2" for="productname">Product ID:</label>
+      <div class="col-sm-10">
+        <form:input class="form-control" path="id" value="${product.id}"/>
+      </div>
+    </div>
+    <div>
+     <label class="control-label col-sm-2" for="productname">Product Name:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="productname" placeholder="Enter the name of product"/>
       </div>
-    </div>
+     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="price">Price:</label>
       <div class="col-sm-10">
@@ -53,32 +58,33 @@ $('input[name=mfg]').datepicker({
       </div>
     </div>
      <div class="form-group">
-     <label class="control-label col-sm-2" for="mfg" name="mfg" >Mfg Date:</label>
+     <label class="control-label col-sm-2" for="mfg"  >Mfg Date:</label>
         <div class="col-sm-10">
       <form:input path="mfg" class="form-control"/>
       <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
       </div>
       </div>
-    <div class="form-group">
-<label for="category">Category</label>
+    	<div class="form-group">
+			<label for="category">Category</label>
 <!-- List<Category> c =model.getAttribute("categories");
 out.println(c.id)
 out.println(c.categoryDetails);-->
-
- 
-<c:forEach var="c" items="${categories}">
-<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
-</c:forEach>
-
-</div>
-<div class="form-group">
+	<c:forEach var="c" items="${categories}">
+	<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
+		</c:forEach>
+		</div>
+		 <div class="form-group">
+      <label for="image">Image</label>
+      <form:input path="images" type="file"/>
+    </div>
+		<div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-<input type="submit" value="EDIT Product" class="btn btn-default">
-</div>
-</div>
+				<input type="submit" value="EDIT Product" class="btn btn-default">
+		</div>
+			</div>
     </form:form>
-</div>
+    </div>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

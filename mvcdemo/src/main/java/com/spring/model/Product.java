@@ -1,4 +1,4 @@
-package com.spring.mvc;
+package com.spring.model;
 
 
 import java.io.Serializable;
@@ -12,10 +12,12 @@ import javax.persistence.JoinColumn;
 
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="product")
@@ -42,6 +44,8 @@ private String quantity;
 	@NotNull(message="mfg date is mandatory")
 private Date mfg;
 private String description;
+@Transient
+private MultipartFile images; 
 
 @ManyToOne
 @JoinColumn(name="cid")
@@ -96,5 +100,11 @@ public Date getMfg() {
 }
 public void setMfg(Date mfg) {
 	this.mfg = mfg;
+}
+public MultipartFile getImages() {
+	return images;
+}
+public void setImages(MultipartFile images) {
+	this.images = images;
 }
 }
