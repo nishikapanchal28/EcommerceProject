@@ -19,24 +19,27 @@
     <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 <title>Insert title here</title>
 <script>
-$(document).ready(function() {
-	var searchCondition='$(searchCondition)';
-	$('table').DataTable({"lenghthMenu":[[3,5,7,-1],[3,5,7,"All"]],"oSearch":{"sSearch":searchCondition}})
-	
-})</script>
+$(document).ready(function(){
+	var searchCondition=${searchCondition};
+	$('.table').DataTable({
+		"lengthMenu":[[3,5,7,-1],[3,5,7,"All"]],
+		"oSearch":{"sSearch":searchCondition}
+	})
+});
+</script>
 </head>
 <body>
 
-<table><tr>
-<th>product image|</th>
-<th>product name |</th>
-<th>price|</th>
-<th>quantity|</th>
-<th>category|</th>
-<th>delete/edit
-</th></tr>
+<table class="table"><thead><tr>
+<th>PRODUCT IMAGE</th>
+<th>PRODUCT NAME </th>
+<th>PRICE</th>
+<th>QUANTITY</th>
+<th>PRODUCT CATEGORY</th>
+<th>VIEW/  EDIT/  DELETE</th></tr></thead>
 <c:forEach var="p" items="${productList}">
-<tr><td>
+<tbody>
+<tr class="info"><td>
 <c:url var="src" value="D:/images/${p.id}.png"></c:url>
 <img src="${pageContext.request.contextPath}/resources/images/${p.id}.png" height="60" width="60"/>
 </td>
@@ -47,19 +50,24 @@ ${p.productname }
 ${p.price }
 </td>
 <td>
-${p.quantity }
+${p.quantity }</td>
+<td>
 ${p.category.categoryDetails}
 </td>
+<td>
+<c:url var="view" value="/editproduct?id=${p.id }"></c:url>
+					<a href="${edit}"><span class="glyphicon glyphicon-info"></span></a>
+</td><td>
+<c:url var="edit" value="/editproduct?id=${p.id}"></c:url>
+			<a href="${edit}"><span class="glyphicon glyphicon-pencil"></span></a>
+			</td>
 <td>
 <c:url var="delete" value="/deleteproduct/${p.id }"></c:url>
 					<a href="${delete}"><span class="glyphicon glyphicon-remove"></span></a>
 </td>
-<td>
-<c:url var="edit" value="/editproduct?id=${p.id}"></c:url>
-					<a href="${edit}"><span class="glyphicon glyphicon-pencil"></span></a>
-</td>
 </tr>
 </c:forEach>
+</tbody>
 </table>
 </body>
 </html>

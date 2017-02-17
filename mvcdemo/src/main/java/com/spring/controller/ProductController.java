@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-
+import com.spring.model.Category;
 import com.spring.model.Product;
 import com.spring.service.CategoryService;
 import com.spring.service.ProductService;
@@ -115,13 +116,30 @@ if(result.hasErrors())
 	return "redirect:/listofproducts";
 }
 @RequestMapping("/productsByCategory")
-public String getProductsByCategory(@RequestParam(name="searchCondition") String searchCondition,
+public String getProductsByCategory(@RequestParam(name="item") String item,
 		Model model){
-	List<Product> products=productService.ListAllProducts();
+	
+	List<Product> list=productService.ListAllProducts();
+	List<Product> newList=new ArrayList<>();
+	
+	for(Product p : list)
+	{
+		
+			if(p.getCategory().getCategoryDetails().equals(item))
+			{
+				newList.add(p);
+			}
+		
+	}
+	for(Product ps : newList)
+	{
+		System.out.println(ps.getId()+" : "+ps.getProductname());
+	}
+	
 	//Assigning list of products to model attribute products
-	model.addAttribute("productList",products);
-	model.addAttribute("searchCondition",searchCondition);
-	return "redirect:/listofproducts";
+	model.addAttribute("productList",newList);
+	//model.addAttribute("searchCondition",searchCondition);
+	return "listofproducts";
 }
 }
 

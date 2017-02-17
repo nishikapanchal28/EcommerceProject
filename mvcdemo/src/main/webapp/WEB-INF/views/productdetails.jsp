@@ -24,6 +24,10 @@ $('input[name=mfg]').datepicker({
 <div class="container">
 <c:url value="/addproduct" var="url"></c:url>
 <form:form action="addproduct" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
+<div class="panel panel-default">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  PRODUCT DETAILS </div>
+       <div class="panel-body">
 <div class="form-group">
 <label for="id"></label>
 <form:hidden  path=""/>
@@ -55,31 +59,29 @@ $('input[name=mfg]').datepicker({
      <div class="form-group">
      <label class="control-label col-sm-2" for="mfg" name="mfg" >Mfg Date:</label>
         <div class="col-sm-10">
-      <form:input path="mfg" class="form-control"/>
+      <form:input path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
       <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
       </div>
       </div>
     <div class="form-group">
-<label for="category">Category</label>
-<!-- List<Category> c =model.getAttribute("categories");
-out.println(c.id)
-out.println(c.categoryDetails);-->
-
- 
+<label class="control-label col-sm-2" class="radio-inline" type="radio" name="optradio" for="category">Category:</label> 
 <c:forEach var="c" items="${categories}">
 <form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
 </c:forEach>
 
 </div>
   <div class="form-group">
-      <label for="image">Image</label>
-      <form:input path="images" type="file"/>
+      <label class="control-label col-sm-2" for="image">Image:</label>
+      <form:input path="images" type="file" />
     </div>
 
 <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-<input type="submit" value="Add Product" class="btn btn-default">
+<input type="submit" value="ADD PRODUCT" class="btn btn-info"">
+<input type="submit" value="CANCEL" class="btn btn-info"">
+</div>
+</div>
 </div>
 </div>
     </form:form>

@@ -13,6 +13,10 @@
 <body>
   <div class="container">
   <form:form action="addPerson" commandName="person" class="form-horizontal">
+  <div class="panel panel-default">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  LOGIN DETAILS </div>
+       <div class="panel-body">
     <div class="form-group">
       <label class="control-label col-sm-2" for="name">User name:</label>
       <div class="col-sm-10">
@@ -36,9 +40,10 @@
      <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-       <input type="submit" value="submit">
+       <input type="submit" value="submit" class="btn btn-info">
+       <input type="submit" value="CANCEL" class="btn btn-info">
       </div>
-    </div>
+    </div></div></div>
         </form:form>
     </div>
 </body>

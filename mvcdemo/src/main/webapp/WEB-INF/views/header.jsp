@@ -34,17 +34,18 @@
       <li><a href="productdetails">Add New Product</a></li>
       <li><a href="listofproducts">View All Products</a>
       <li><a href="getpersondetails"><span class="glyphicon glyphicon-user"></span>Login</a></li>
-      <li><a href="getregistrationdetails"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+      <li><a href="registerCustomer"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+      
       <li class="dropdown">
 			<a href="" class="dropdown-toggle" data-toggle="dropdown">
                      Select by Category<b class="caret"></b></a>
 			<ul class="dropdown-menu">
-			<c:url var="url1" value="/productsByCategory?searchCondition=New Arrivals"></c:url>
+			<c:url var="url1" value="/productsByCategory?item=New Arrivals"></c:url>
 			<li><a href="${url1}">New Arrivals</a></li>
-			<c:url var="url2" value="/productsByCategory?searchCondition=Sales"></c:url>
+			<c:url var="url2" value="/productsByCategory?item=Sales"></c:url>
 			<li><a href="${url2}">Sales</a></li>
 			
-			<c:url var="url_3" value="/productsByCategory?searchCondition=Genreal"></c:url>
+			<c:url var="url_3" value="/productsByCategory?item=General"></c:url>
 			<li><a href="${url_3}">General </a></li>
 			
 			

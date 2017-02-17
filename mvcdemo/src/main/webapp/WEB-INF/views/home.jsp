@@ -10,8 +10,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   </head>
 <body>
-<div class="container text-center"><B>WELCOME TO HOME PAGE</B></div>
-<div class="container">
+<div class="container text-center"></div>
+<div class="container text-center">
+<div class="panel panel-default">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <B>WELCOME TO HOME PAGE</B></div>
+       <div class="panel-body">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -59,12 +63,6 @@
           <h3></h3>
           <p></p>
         </div>
-      </div><div class="item">
-        <img src="resources/images/travel-bag-packs-500x500.jpg" alt="" width="800" height="100">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
       </div>
       <div class="item">
         <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="800" height="100">
@@ -73,13 +71,7 @@
           <p></p>
         </div>
       </div>
-      <div class="item">
-        <img src="resources/images/img-1.jpg" alt="" width="800" height="100">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
+     
   
     </div>
 
@@ -92,6 +84,8 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
+  </div>
   </div>
 </div>
 </body>

@@ -64,6 +64,24 @@ public class Customer {
 	public void setUsers(Users users) {
 		this.users = users;
 	}
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+	public BillingAddress getBillingaddress() {
+		return billingaddress;
+	}
+	public void setBillingaddress(BillingAddress billingaddress) {
+		this.billingaddress = billingaddress;
+	}
+	public ShippingAddress getShippingaddress() {
+		return shippingaddress;
+	}
+	public void setShippingaddress(ShippingAddress shippingaddress) {
+		this.shippingaddress = shippingaddress;
+	}
 
 
 	}
