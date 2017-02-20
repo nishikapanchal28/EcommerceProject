@@ -15,17 +15,17 @@
   <form:form action="addPerson" commandName="person" class="form-horizontal">
   <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  LOGIN DETAILS </div>
+  <center><B>LOGIN DETAILS</B> </center></div>
        <div class="panel-body">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="name">User name:</label>
+      <label class="control-label col-sm-2" for="name">USER NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="name" placeholder="Enter user name"/>
       </div>
     </div>
     
     <div class="form-group">
-      <label class="control-label col-sm-2" for="password">Password:</label>
+      <label class="control-label col-sm-2" for="password">PASSWORD:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="password" placeholder="Enter password"/>
       </div>
@@ -33,14 +33,14 @@
      <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
+          <label><input type="checkbox"> Remember Me</label>
         </div>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-       <input type="submit" value="submit" class="btn btn-info">
+       <input type="submit" value="SUBMIT" align="right"class="btn btn-info">
        <input type="submit" value="CANCEL" class="btn btn-info">
       </div>
     </div></div></div>

@@ -29,7 +29,11 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-
+<div class="container text-left">
+<div class="panel panel-default">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>LIST OF ALL PRODUCTS</B></center></div>
+       <div class="panel-body">
 <table class="table"><thead><tr>
 <th>PRODUCT IMAGE</th>
 <th>PRODUCT NAME </th>
@@ -56,19 +60,19 @@ ${p.category.categoryDetails}
 </td>
 <td>
 <c:url var="view" value="/editproduct?id=${p.id }"></c:url>
-					<a href="${edit}"><span class="glyphicon glyphicon-info"></span></a>
-</td><td>
+					<a href="${edit}"><span class="glyphicon glyphicon-info-sign"></span></a>
+
 <c:url var="edit" value="/editproduct?id=${p.id}"></c:url>
-			<a href="${edit}"><span class="glyphicon glyphicon-pencil"></span></a>
-			</td>
-<td>
+			<a href="${edit}"><span class="glyphicon glyphicon-edit"></span></a>
+			
 <c:url var="delete" value="/deleteproduct/${p.id }"></c:url>
-					<a href="${delete}"><span class="glyphicon glyphicon-remove"></span></a>
+					<a href="${delete}"><span class="glyphicon glyphicon-remove-sign"></span></a>
 </td>
 </tr>
 </c:forEach>
 </tbody>
 </table>
+</div></div></div>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

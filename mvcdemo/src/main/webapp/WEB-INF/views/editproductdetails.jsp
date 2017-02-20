@@ -22,6 +22,10 @@ $('input[name=mfg]').datepicker({
 </head>
 <body>
 <div class="container">
+<div class="panel panel-default">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>EDIT PRODUCT DETAILS</B> </center></div>
+       <div class="panel-body">
 <form:form action="editProduct/${product.id}" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
 <div class="form-group">
 <label for="id"></label>
@@ -33,58 +37,61 @@ $('input[name=mfg]').datepicker({
         <form:input class="form-control" path="id" value="${product.id}"/>
       </div>
     </div>
-    <div>
-     <label class="control-label col-sm-2" for="productname">Product Name:</label>
+<div class="form-group">
+      <label class="control-label col-sm-2" for="productname">PRODUCT NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="productname" placeholder="Enter the name of product"/>
       </div>
-     </div>
+    </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="price">Price:</label>
+      <label class="control-label col-sm-2" for="price">PRICE:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="price" placeholder="Enter the price of product"/>
       </div>
       </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="manufacturerename">Manufacturer Name:</label>
+      <label class="control-label col-sm-2" for="manufacturerename">MANUFACTURER NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="manufacturerename"  placeholder="Enter the name of manufacturer"/>
       </div>
     </div>
       <div class="form-group">
-      <label class="control-label col-sm-2" for="quantity">Quantity:</label>
+      <label class="control-label col-sm-2" for="quantity">QUANTITY:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="quantity"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-     <label class="control-label col-sm-2" for="mfg"  >Mfg Date:</label>
+     <label class="control-label col-sm-2" for="mfg" name="mfg" >MFG DATE:</label>
         <div class="col-sm-10">
-      <form:input path="mfg" class="form-control"/>
+      <form:input path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
       <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
       </div>
       </div>
-    	<div class="form-group">
-			<label for="category">Category</label>
-<!-- List<Category> c =model.getAttribute("categories");
-out.println(c.id)
-out.println(c.categoryDetails);-->
-	<c:forEach var="c" items="${categories}">
-	<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
-		</c:forEach>
-		</div>
-		 <div class="form-group">
-      <label for="image">Image</label>
-      <form:input path="images" type="file"/>
+    <div class="form-group">
+<label class="control-label col-sm-2" class="radio-inline"  for="category">CATEGORY:</label> 
+<c:forEach var="c" items="${categories}">
+<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
+</c:forEach>
+
+</div>
+  <div class="form-group">
+      <label class="control-label col-sm-2" for="image">IMAGE:</label>
+      <form:input path="images" type="file" />
     </div>
-		<div class="form-group">
+
+<div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-				<input type="submit" value="EDIT Product" class="btn btn-default">
-		</div>
-			</div>
+<input type="submit" value="EDIT PRODUCT" class="btn btn-info">
+<input type="submit" value="CANCEL" class="btn btn-info">
+</div>
+</div>
+
     </form:form>
-    </div>
+</div>
+</div>
+</div>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

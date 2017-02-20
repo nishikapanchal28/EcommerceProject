@@ -87,6 +87,8 @@ public String deleteProduct(@PathVariable("id") int id){
 public String editProduct(Model model,@RequestParam("id") int id){	
 	Product p=productService.getById(id);
 	model.addAttribute("product", p);
+	model.addAttribute("categories",categoryService.getCategories());
+	 
 	
 	return "editproductdetails";
 }

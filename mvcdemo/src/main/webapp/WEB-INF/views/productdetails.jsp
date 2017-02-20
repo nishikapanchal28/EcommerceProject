@@ -26,52 +26,52 @@ $('input[name=mfg]').datepicker({
 <form:form action="addproduct" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
 <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  PRODUCT DETAILS </div>
+  <center><B>PRODUCT DETAILS</B></center> </div>
        <div class="panel-body">
 <div class="form-group">
 <label for="id"></label>
 <form:hidden  path=""/>
 </div>
 <div class="form-group">
-      <label class="control-label col-sm-2" for="productname">Product Name:</label>
+      <label class="control-label col-sm-2" for="productname">PRODUCT NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="productname" placeholder="Enter the name of product"/>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="price">Price:</label>
+      <label class="control-label col-sm-2" for="price">PRICE:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="price" placeholder="Enter the price of product"/>
       </div>
       </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="manufacturerename">Manufacturer Name:</label>
+      <label class="control-label col-sm-2" for="manufacturerename">MANUFACTURER NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="manufacturerename"  placeholder="Enter the name of manufacturer"/>
       </div>
     </div>
       <div class="form-group">
-      <label class="control-label col-sm-2" for="quantity">Quantity:</label>
+      <label class="control-label col-sm-2" for="quantity">QUANTITY:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="quantity"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-     <label class="control-label col-sm-2" for="mfg" name="mfg" >Mfg Date:</label>
+     <label class="control-label col-sm-2" for="mfg" name="mfg" >MFG DATE:</label>
         <div class="col-sm-10">
       <form:input path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
       <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
       </div>
       </div>
     <div class="form-group">
-<label class="control-label col-sm-2" class="radio-inline" type="radio" name="optradio" for="category">Category:</label> 
+<label class="control-label col-sm-2" class="radio-inline"  for="category">CATEGORY:</label> 
 <c:forEach var="c" items="${categories}">
 <form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
 </c:forEach>
 
 </div>
   <div class="form-group">
-      <label class="control-label col-sm-2" for="image">Image:</label>
+      <label class="control-label col-sm-2" for="image">IMAGE:</label>
       <form:input path="images" type="file" />
     </div>
 
