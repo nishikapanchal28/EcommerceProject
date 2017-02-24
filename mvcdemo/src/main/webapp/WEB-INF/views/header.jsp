@@ -33,9 +33,7 @@
 
       <li><a href="productdetails">Add New Product</a></li>
       <li><a href="listofproducts">View All Products</a>
-      <li><a href="getpersondetails"><span class="glyphicon glyphicon-user"></span>Login</a></li>
-      <li><a href="registerCustomer"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
-      
+     
       <li class="dropdown">
 			<a href="" class="dropdown-toggle" data-toggle="dropdown">
                      Select by Category<b class="caret"></b></a>
@@ -51,6 +49,10 @@
 			
 			</ul>
 			</li>
+			 <li><a href="getpersondetails"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      <li><a href="registerCustomer"><span class="glyphicon glyphicon-"></span>Register</a></li>
+           <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+      
     </ul>
   </div>
 </nav>

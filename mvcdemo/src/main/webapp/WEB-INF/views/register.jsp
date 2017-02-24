@@ -16,8 +16,8 @@
 </head>
 <body>
 <div class="container">
-<c:url value="/registerCustomer" var="url"></c:url>
-<form:form action="registerCustomer" commandName="customer" method="GET" class="form-horizontal">
+
+<form:form action="registerdetails" commandName="customer" method="POST" class="form-horizontal">
  <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   YOUR PERSONAL DETAILS </div>

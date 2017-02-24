@@ -1,5 +1,6 @@
 package com.spring.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,16 +17,16 @@ public class Customer {
 	private String lastname;
 	private String email;
 	private String phonenumber;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	private Users users;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="cart_id")
 	private Cart cart;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="billingaddress_id")
 	private BillingAddress billingaddress;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="shippingaddress_id")
 	private ShippingAddress shippingaddress;
 	public int getId() {
