@@ -8,7 +8,7 @@ public interface ProductService {
 	
 	public void saveProduct(Product product);
 
-	List<Product> ListAllProducts();
+	List<Product> listAllProducts();
 
 
 

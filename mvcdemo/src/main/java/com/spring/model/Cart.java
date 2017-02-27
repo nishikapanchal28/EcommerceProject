@@ -1,5 +1,7 @@
 package com.spring.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,7 +10,11 @@ import javax.persistence.OneToOne;
 
 @Entity
 
-public class Cart {
+public class Cart implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6905166810498424713L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;

@@ -71,7 +71,7 @@ public String productAdd(@ModelAttribute("product") Product product,HttpServletR
 }
 @RequestMapping(value="/listofproducts" , method = RequestMethod.GET)
 public String getAllProducts(Model model){
-	List<Product> products=productService.ListAllProducts();
+	List<Product> products=productService.listAllProducts();
 	model.addAttribute("productList",products);
 	
 	return "listofproducts";
@@ -121,7 +121,7 @@ if(result.hasErrors())
 public String getProductsByCategory(@RequestParam(name="item") String item,
 		Model model){
 	
-	List<Product> list=productService.ListAllProducts();
+	List<Product> list=productService.listAllProducts();
 	List<Product> newList=new ArrayList<>();
 	
 	for(Product p : list)

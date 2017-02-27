@@ -28,7 +28,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/Bags-06.jpg" alt="" width="800" height="400">
+        <img src="resources/images/Bags-06.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -36,36 +36,21 @@
       </div>
 
       <div class="item">
-        <img src="resources/images/Black-Leather-Handbags.jpg" alt="" width="800" height="100">
+        <img src="resources/images/img-1.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
         </div>
       </div>
-    
-      <div class="item">
-        <img src="resources/images/hand-bag-1.jpg" alt="" width="800" height="100">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="resources/images/rucksacks-045.jpg" alt="" width="800" height="100">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div><div class="item">
-        <img src="resources/images/Stylish-Travel-Bags-for-Men.jpg" alt="" width="800" height="100">
+    <div class="item">
+        <img src="resources/images/Stylish-Travel-Bags-for-Men.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
         </div>
       </div>
       <div class="item">
-        <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="800" height="100">
+        <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>

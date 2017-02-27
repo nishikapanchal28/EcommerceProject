@@ -32,7 +32,7 @@ public class ProductDaoImpl implements ProductDao {
 		sessionFactory.getCurrentSession().save(product);
 	}
 
-	public List<Product> ListAllProducts() {
+	public List<Product> listAllProducts() {
 		Session session = sessionFactory.openSession();
 		Query query = session.createQuery("from Product");
 		List<Product> products = query.list();

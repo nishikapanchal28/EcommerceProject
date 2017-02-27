@@ -23,8 +23,8 @@ public class ProductServiceImpl implements ProductService {
 		 productDao.saveProduct(product);
 	}
 
-	public List<Product> ListAllProducts() {
-		return productDao.ListAllProducts();
+	public List<Product> listAllProducts() {
+		return productDao.listAllProducts();
 	}
 
 
