@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   </head>
-<body>
+<body><center>
 <div class="container text-center"></div>
 <div class="container text-center">
 <div class="panel panel-default">
@@ -28,7 +28,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/Bags-06.jpg" alt="" width="600" height="200">
+        <img src="resources/images/Bags-06.jpg" alt="" width="80%" height="400px" margin="auto">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -72,7 +72,7 @@
   </div>
   </div>
   </div>
-</div>
+</div></center>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

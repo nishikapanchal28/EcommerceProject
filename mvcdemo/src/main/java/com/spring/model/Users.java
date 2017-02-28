@@ -1,24 +1,25 @@
 package com.spring.model;
 
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-@Entity
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+@Entity
 public class Users implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -1519926193389381058L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
+	@NotEmpty(message="enter username")
 private String username;
+	@NotEmpty(message="enter password")
 private String password;
 private boolean enabled=true;
 @OneToOne(mappedBy="users")

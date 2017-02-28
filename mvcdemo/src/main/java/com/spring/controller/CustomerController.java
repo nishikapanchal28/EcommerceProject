@@ -1,8 +1,11 @@
 package com.spring.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +27,9 @@ public class CustomerController {
 	return "register";
 }
 	@RequestMapping(value = "/registerdetails", method = RequestMethod.POST)
-	public String registerCustomer(@ModelAttribute(value = "customer") Customer customer) {
+	public String registerCustomer(@Valid@ModelAttribute(value = "customer") Customer customer, BindingResult result) {
+		if (result.hasErrors())
+			return "";
 		customerService.saveCustomer(customer);
 		return "home";
 	}

@@ -8,14 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	@NotEmpty(message="enter first name")		
 	private String firstname;
+	@NotEmpty(message="enter last name ")
 	private String lastname;
+	@NotEmpty(message="enter your email")
+	@Email(message="provide a valid email-id")
 	private String email;
+	@NotEmpty(message="enter phone number")
+	@Length(max=10, min=10)
 	private String phonenumber;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
