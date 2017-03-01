@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
@@ -29,15 +30,18 @@ public class Customer {
 	private String phonenumber;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
+	@Valid
 	private Users users;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="cart_id")
 	private Cart cart;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="billingaddress_id")
+	@Valid
 	private BillingAddress billingaddress;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="shippingaddress_id")
+	@Valid
 	private ShippingAddress shippingaddress;
 	public int getId() {
 		return id;

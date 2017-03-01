@@ -42,13 +42,7 @@
           <p></p>
         </div>
       </div>
-    <div class="item">
-        <img src="resources/images/Stylish-Travel-Bags-for-Men.jpg" alt="" width="600" height="200">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
+   
       <div class="item">
         <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">

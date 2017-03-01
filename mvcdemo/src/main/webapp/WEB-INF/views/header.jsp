@@ -49,7 +49,7 @@
 			
 			</ul>
 			</li>
-			 <li><a href="getpersondetails"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			 <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       <li><a href="registerCustomer"><span class="glyphicon glyphicon-"></span>Register</a></li>
            <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
       

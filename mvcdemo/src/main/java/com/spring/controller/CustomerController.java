@@ -27,10 +27,16 @@ public class CustomerController {
 	return "register";
 }
 	@RequestMapping(value = "/registerdetails", method = RequestMethod.POST)
-	public String registerCustomer(@Valid@ModelAttribute(value = "customer") Customer customer, BindingResult result) {
+	public String registerCustomer(@Valid@ModelAttribute(value = "customer") Customer customer, BindingResult result, Model model) {
 		if (result.hasErrors())
-			return "";
-		customerService.saveCustomer(customer);
+			return "register";
+		
+		try {
+			customerService.saveCustomer(customer);
+		} catch (Exception e) {
+			model.addAttribute("duplicateUsername","Username already exists. Please enter different username");
+			return "register";
+		}
 		return "home";
 	}
 }

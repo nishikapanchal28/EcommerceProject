@@ -25,25 +25,31 @@
 <div class="form-group">
       <label class="control-label col-sm-2" for="firstname"> first name  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="firstname" placeholder="Enter the name of product"/>
+        <form:input class="form-control" path="firstname" placeholder="Enter the first name"/>
+        <form:errors path="firstname"></form:errors>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="lastname">last name</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="lastname" placeholder="Enter the price of product"/>
+        <form:input class="form-control" path="lastname" placeholder="Enter the last name "/>
+          <form:errors path="lastname"></form:errors>
       </div>
       </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email"> email </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="email"  placeholder="Enter the name of manufacturer"/>
+        <form:input class="form-control" path="email"  placeholder="Enter email"/>
+                  <form:errors path="lastname"></form:errors>
+        
       </div>
     </div>
       <div class="form-group">
       <label class="control-label col-sm-2" for="phonenumber">phone number   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="phonenumber"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="phonenumber"  placeholder="Enter phone number "/>
+                          <form:errors path="phonenumber"></form:errors>
+        
       </div>
     </div>
     </div>
@@ -55,13 +61,16 @@
       <div class="form-group">
       <label class="control-label col-sm-2" for="username">user name   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="users.username"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="users.username"  placeholder="Enter user name "/>
+          <form:errors path="users.username"></form:errors>
       </div>
     </div>
  <div class="form-group">
       <label class="control-label col-sm-2" for="password">password   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="users.password"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="users.password"  placeholder="Enter password"/>
+                  <form:errors path="users.password"></form:errors>
+        
       </div>
     </div>
     </div>

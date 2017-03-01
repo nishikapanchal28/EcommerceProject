@@ -4,17 +4,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 public class BillingAddress {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
+	@NotEmpty(message="enter apartment number")
 	private String apartmentnumber;
+	@NotEmpty(message="enter street name ")
 	private String streetname;
+	@NotEmpty(message="enter city")
 	private String city;
+	@NotEmpty(message="enter state")
 	private String state;
+	@NotEmpty(message="enter country")
 	private String country;
+	@NotEmpty(message="enter zipcode")
 	private String zipcode;
+	
 	public int getId() {
 		return id;
 	}
