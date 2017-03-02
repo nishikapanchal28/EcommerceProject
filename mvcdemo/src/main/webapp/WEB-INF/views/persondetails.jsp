@@ -12,7 +12,7 @@
   </head>
 <body>
   <div class="container">
-  <form:form action="loginform"   class="form-horizontal">
+  <form:form action="login"  method="get" class="form-horizontal">
   <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>LOGIN DETAILS</B> </center></div>
