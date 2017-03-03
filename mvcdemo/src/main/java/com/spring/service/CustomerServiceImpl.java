@@ -18,5 +18,10 @@ public CustomerDao customerDao;
 		customerDao.saveCustomer(customer);
 		
 	}
+	@Override
+	public Customer getCustomerByUsername(String username) {
+		// TODO Auto-generated method stub
+		return customerDao.getCustomerByUsername(username);
+	}
 
 }

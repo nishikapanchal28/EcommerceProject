@@ -1,5 +1,8 @@
 package com.spring.dao;
 
+import javax.persistence.Query;
+
+import org.h2.engine.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -38,6 +41,11 @@ public class CustomerDaoImpl implements CustomerDao{
 		    System.out.println(customer.getUsers().isEnabled()); 
 		sessionFactory.getCurrentSession().save(customer);
 		
+	}
+	@Override
+	public Customer getCustomerByUsername(String username) {
+		// TODO Auto-generated method stub
+	return sessionFactory.getCurrentSession().get(Customer.class, username);
 	}
 
 }
