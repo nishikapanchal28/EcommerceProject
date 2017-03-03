@@ -21,7 +21,6 @@ public class CustomerDaoImpl implements CustomerDao{
 		super();
 		this.sessionFactory=sessionFactory;
 	}
-	@Override
 	public void saveCustomer(Customer customer) {
 		// TODO Auto-generated method stub
 		
@@ -42,7 +41,7 @@ public class CustomerDaoImpl implements CustomerDao{
 		sessionFactory.getCurrentSession().save(customer);
 		
 	}
-	@Override
+	
 	public Customer getCustomerByUsername(String username) {
 		// TODO Auto-generated method stub
 	return sessionFactory.getCurrentSession().get(Customer.class, username);

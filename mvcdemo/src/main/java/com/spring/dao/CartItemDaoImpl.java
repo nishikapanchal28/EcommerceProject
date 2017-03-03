@@ -9,7 +9,7 @@ import com.spring.model.CartItem;
 public class CartItemDaoImpl implements CartItemDao{
 @Autowired
 private SessionFactory sessionFactory;
-	@Override
+	
 	public void addCartItem(CartItem cartItem) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().saveOrUpdate(cartItem);

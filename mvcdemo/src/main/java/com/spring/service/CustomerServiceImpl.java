@@ -12,13 +12,13 @@ import com.spring.model.Customer;
 public class CustomerServiceImpl implements CustomerService{
 @Autowired
 public CustomerDao customerDao;
-	@Override
+	
 	public void saveCustomer(Customer customer) {
 		// TODO Auto-generated method stub
 		customerDao.saveCustomer(customer);
 		
 	}
-	@Override
+	
 	public Customer getCustomerByUsername(String username) {
 		// TODO Auto-generated method stub
 		return customerDao.getCustomerByUsername(username);
