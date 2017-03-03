@@ -25,7 +25,7 @@ public class CartItemController {
 	private CartItemService cartitemservice;
 	@Autowired
 	private CustomerService customerservice;
-@RequestMapping("/addCartItem/{p.id}")
+@RequestMapping("/all/addCartItem/{p.id}")
 public void addCartItem(@PathVariable(value="pid") int productId){
 	User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	

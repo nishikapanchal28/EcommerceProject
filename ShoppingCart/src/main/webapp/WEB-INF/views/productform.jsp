@@ -28,7 +28,7 @@ $('input[name=mfg]').datepicker({
 <div class="container">
 <c:url var="url" value="/admin/addproduct"></c:url>
 
-<form:form action="${url }" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
+<form:form action="${url }" commandName="product" method="post" class="form-horizontal" enctype="multipart/form-data">
 <div class="form-group">
 <label for="id"></label>
 <form:hidden  path=""/>

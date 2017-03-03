@@ -38,7 +38,7 @@ public class ProductController {
 	this.productService=productService;
 	System.out.println("PRODUCTSERVICE " + productService);
 }
-@RequestMapping("/productdetails")
+@RequestMapping("/admin/productdetails")
 public String getproductdetails(Model model){
  model.addAttribute("product", new Product());
  model.addAttribute("categories",categoryService.getCategories());
@@ -46,7 +46,7 @@ public String getproductdetails(Model model){
  return "productdetails";
  
 	}
-@RequestMapping(value = "/addproduct", method = RequestMethod.POST)
+@RequestMapping(value = "/admin/addproduct", method = RequestMethod.POST)
 public String productAdd(@ModelAttribute("product") Product product,HttpServletRequest request) {
 	productService.saveProduct(product);
 	MultipartFile productImage=product.getImages();
@@ -69,21 +69,21 @@ public String productAdd(@ModelAttribute("product") Product product,HttpServletR
 	return "home";
 
 }
-@RequestMapping(value="/listofproducts" , method = RequestMethod.GET)
+@RequestMapping(value="/all/listofproducts" , method = RequestMethod.GET)
 public String getAllProducts(Model model){
 	List<Product> products=productService.listAllProducts();
 	model.addAttribute("productList",products);
 	
 	return "listofproducts";
 }
-@RequestMapping("/deleteproduct/{id}")
+@RequestMapping("/admin/deleteproduct/{id}")
 public String deleteProduct(@PathVariable("id") int id){
 	Product p=productService.getById(id);
 	productService.deleteProduct(p);
 	
 	return "redirect:/listofproducts";
 }
-@RequestMapping("/editproduct")
+@RequestMapping("/admin/editproduct")
 public String editProduct(Model model,@RequestParam("id") int id){	
 	Product p=productService.getById(id);
 	model.addAttribute("product", p);
@@ -92,7 +92,7 @@ public String editProduct(Model model,@RequestParam("id") int id){
 	
 	return "editproductdetails";
 }
-@RequestMapping(value ="/editProduct/{id}", method = RequestMethod.POST)
+@RequestMapping(value ="/admin/editProduct/{id}", method = RequestMethod.POST)
 public String editProductDetails(@Valid @PathVariable("id")int id ,@ModelAttribute("product") Product p,
 		BindingResult result,HttpServletRequest request){
 if(result.hasErrors())
@@ -117,7 +117,7 @@ if(result.hasErrors())
 	}
 	return "redirect:/listofproducts";
 }
-@RequestMapping("/productsByCategory")
+@RequestMapping("/all/productsByCategory")
 public String getProductsByCategory(@RequestParam(name="item") String item,
 		Model model){
 	

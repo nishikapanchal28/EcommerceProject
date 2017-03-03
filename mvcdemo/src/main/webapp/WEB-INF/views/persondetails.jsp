@@ -11,16 +11,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 <body>
+${error}
+${logout}
+${registrationSuccess }
   <div class="container">
-  <form:form action="login"  method="get" class="form-horizontal">
+  <form:form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>LOGIN DETAILS</B> </center></div>
        <div class="panel-body">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="name">USER NAME:</label>
+      <label class="control-label col-sm-2" for="username">USER NAME:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="name" placeholder="Enter user name"/>
+        <form:input class="form-control" path="username" placeholder="Enter user name"/>
       </div>
     </div>
     
