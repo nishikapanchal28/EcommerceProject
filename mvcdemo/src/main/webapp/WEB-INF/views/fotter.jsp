@@ -8,19 +8,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-  .bg-4 { 
-      background-color: #2f2f2f;
-      color: #fff;
-  }
-  .container-fluid {
-    
-      padding-bottom:10px;
-  }
-  </style>
-</head>
-<body>
-<footer class="container-fluid bg-4 text-center">
-  <p>@copyright...All rights reserved</p> 
+/* Add a dark background color to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+</style>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
 </footer>
+
+<script>
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip(); 
+})
+</script>
 </body>
 </html>
