@@ -58,7 +58,7 @@
 	
 	<security:http auto-config="true">
 	<security:csrf disabled="true"/>
-	<security:intercept-url pattern="/index*/**" access="permitAll"/>
+	<security:intercept-url pattern="/" access="permitAll"/>
 	<security:intercept-url pattern="/home" access="permitAll"/>
 		<security:intercept-url pattern="/login" access="permitAll"/>
 	<security:intercept-url pattern="/all/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
@@ -73,9 +73,8 @@ password-parameter="j_password"/>
 <security:logout logout-success-url="/login?logout"
 logout-url="/j_spring_security_logout"/>
 	
-	
+
 	</security:http>
-	
 	<security:authentication-manager>
 	<security:authentication-provider>
 	<security:jdbc-user-service data-source-ref="dataSource"
@@ -83,7 +82,4 @@ logout-url="/j_spring_security_logout"/>
 	users-by-username-query="SELECT username, password, enabled FROM users WHERE username=?"/>
 	</security:authentication-provider>
 	</security:authentication-manager>
-  
-   
-     
 </beans>

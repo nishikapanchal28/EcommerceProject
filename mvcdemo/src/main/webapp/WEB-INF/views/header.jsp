@@ -18,6 +18,8 @@
     <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
     <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
   </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -49,7 +51,7 @@
 			
 			</ul>
 			</li>
-			 <li><a href="persondetails"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			 <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       <li><a href="registerCustomer"><span class="glyphicon glyphicon-"></span>Register</a></li>
            <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
       

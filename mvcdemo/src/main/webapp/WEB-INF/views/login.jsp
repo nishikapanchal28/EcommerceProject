@@ -24,14 +24,14 @@ ${registrationSuccess }
     <div class="form-group">
       <label class="control-label col-sm-2" for="username">USER NAME:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="username" placeholder="Enter user name"/>
+        <form:input class="form-control" path="j_username" placeholder="Enter user name"/>
       </div>
     </div>
     
     <div class="form-group">
       <label class="control-label col-sm-2" for="password">PASSWORD:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="password" placeholder="Enter password"/>
+        <form:input class="form-control" path="j_password" placeholder="Enter password"/>
       </div>
     </div>
      <div class="form-group">        

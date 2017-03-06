@@ -53,8 +53,8 @@
 	
 
   <security:http auto-config="true">
-<security:csrf disabled="true"/>
-<security:intercept-url pattern="/index*/**" access="permitAll"/>
+
+<security:intercept-url pattern="/" access="permitAll"/>
 <security:intercept-url pattern="/home" access="permitAll"/>
 <security:intercept-url pattern="/login" access="permitAll"/>
 <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>

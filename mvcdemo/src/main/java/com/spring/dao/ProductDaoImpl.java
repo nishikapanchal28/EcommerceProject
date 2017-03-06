@@ -39,18 +39,18 @@ public class ProductDaoImpl implements ProductDao {
 		session.close();
 		return products;
 	}
-	@Override
+	
 	public Product getById(int id) {
 		return sessionFactory.getCurrentSession().get(Product.class, id);
 	}
 
-	@Override
+	
 	public void deleteProduct(Product p) {
 		sessionFactory.getCurrentSession().delete(p);
 		
 	}
 
-	@Override
+
 	public void updateProduct(Product p) {
 	sessionFactory.getCurrentSession().update(p);
 		

@@ -19,6 +19,6 @@ public String login(@RequestParam(value="error", required=false) String error, @
 		model.addAttribute("error", "invalid ");
 	if(logout != null)
 		model.addAttribute("logout", "successfully logged out" );
-	return "persondetails";
+	return "login";
 }
 }

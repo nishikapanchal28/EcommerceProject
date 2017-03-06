@@ -12,7 +12,8 @@ public HomeController(){
 	System.out.println("creating home controller");
 	
 }
-@RequestMapping("/home")
+
+@RequestMapping(value={"/","home"})
 public String homepage(){
 return "home";
 }
