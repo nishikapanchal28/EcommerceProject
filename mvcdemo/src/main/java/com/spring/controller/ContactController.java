@@ -9,7 +9,7 @@ public ContactController(){
 	System.out.println("creating contact controller");
 	
 }
-@RequestMapping("/all/contact")
+@RequestMapping("/contact")
 public String contactus(){
 	return "contact";
 }

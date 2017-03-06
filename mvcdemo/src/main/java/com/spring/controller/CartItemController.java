@@ -3,11 +3,13 @@ package com.spring.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.spring.model.Cart;
 import com.spring.model.CartItem;
@@ -25,6 +27,7 @@ public class CartItemController {
 	private CartItemService cartitemservice;
 	@Autowired
 	private CustomerService customerservice;
+	@ResponseStatus(value=HttpStatus.NO_CONTENT)
 @RequestMapping("/all/addCartItem/{p.id}")
 public void addCartItem(@PathVariable(value="pid") int productId){
 	User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();

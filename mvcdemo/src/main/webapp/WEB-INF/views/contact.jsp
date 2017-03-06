@@ -15,13 +15,13 @@
 <body>
 <div class="container">
   <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
+  <p class="text-center"><em></em></p>
   <div class="row test">
     <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
+      <p>Drop a mail</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>india</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 22222222</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: nishikpanchal@gmail.com</p> 
     </div>
     <div class="col-md-8">
       <div class="row">

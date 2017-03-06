@@ -32,11 +32,11 @@
 
 <c:if test="${pageContext.request.userPrincipal.name==null}">
 
-<c:url var="register" value="/all/registerCustomer"></c:url>
+<c:url var="register" value="/registerCustomer"></c:url>
 
 <a href ="${register}">register</a>|
 
-<c:url var="login" value="/all/login"></c:url>
+<c:url var="login" value="/login"></c:url>
 
 <a href ="${login}">Login</a>|
 
@@ -56,7 +56,7 @@
 
 <a href ="${allproducts}">list all products</a>|
 
-<a href ="">welcome${pageContext.request.userPrincipal.name}</a>
+<a href ="">welcome ${pageContext.request.userPrincipal.name}</a>
 
 <ul>
 		 <li class="dropdown">

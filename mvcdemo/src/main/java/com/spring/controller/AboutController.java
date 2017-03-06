@@ -8,7 +8,7 @@ public class AboutController {
 public AboutController(){
 	System.out.println("creating about controller");
 }
-@RequestMapping("/all/about")
+@RequestMapping("/about")
 public String aboutus(){
 	return "about";
 }

@@ -30,30 +30,55 @@
     <ul class="nav navbar-nav">
       <li class="active">
       <li><a href="home">Home</a></li>
+      
       <li><a href="contact">Contact us</a></li>
+      
       <li><a href="about">About us</a></li>
+      
+      <c:if test="${pageContext.request.userPrincipal.name!=null}">
+      
+<security:authorize access="hasRole('ROLE_ADMIN')">
 
-      <li><a href="productdetails">Add New Product</a></li>
-      <li><a href="listofproducts">View All Products</a>
+<c:url var="addproduct" value="/admin/addproduct"></c:url>
+
+      <li><a href="${addproduct }">Add New Product</a></li>
+      
+      </security:authorize>
+      <c:url var="listofproducts" value="/all/listofproducts"></c:url>
+      
+      <li><a href="${listofproducts}">View All Products</a>
      
       <li class="dropdown">
 			<a href="" class="dropdown-toggle" data-toggle="dropdown">
                      Select by Category<b class="caret"></b></a>
 			<ul class="dropdown-menu">
-			<c:url var="url1" value="/productsByCategory?item=New Arrivals"></c:url>
+			
+			<c:url var="url1" value="/all/productsByCategory?item=New Arrivals"></c:url>
 			<li><a href="${url1}">New Arrivals</a></li>
-			<c:url var="url2" value="/productsByCategory?item=Sales"></c:url>
+			
+			<c:url var="url2" value="/all/productsByCategory?item=Sales"></c:url>
 			<li><a href="${url2}">Sales</a></li>
 			
-			<c:url var="url_3" value="/productsByCategory?item=General"></c:url>
+			<c:url var="url_3" value="/all/productsByCategory?item=General"></c:url>
 			<li><a href="${url_3}">General </a></li>
-			
 			
 			</ul>
 			</li>
-			 <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-      <li><a href="registerCustomer"><span class="glyphicon glyphicon-"></span>Register</a></li>
+			</c:if>
+			
+			
+			<c:url var="login" value="/login"></c:url>
+			 <li><a href="${login }"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			 
+			 <c:url var="register" value="/registerCustomer"></c:url>
+      <li><a href="${register}"><span class="glyphicon glyphicon-"></span>Register</a></li>
+      
+      
+     <li> <a href ="">welcome ${pageContext.request.userPrincipal.name}</a></li>
+      
+      <c:if test="${pageContext.request.userPrincipal.name!=null}">
            <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+      </c:if>
       
     </ul>
   </div>

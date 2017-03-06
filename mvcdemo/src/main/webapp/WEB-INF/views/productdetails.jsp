@@ -22,7 +22,7 @@ $('input[name=mfg]').datepicker({
 </head>
 <body>
 <div class="container">
-<c:url value="/addproduct" var="url"></c:url>
+<c:url value="/admin/addproduct" var="url"></c:url>
 <form:form action="addproduct" commandName="product" method="POST" class="form-horizontal" enctype="multipart/form-data">
 <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">

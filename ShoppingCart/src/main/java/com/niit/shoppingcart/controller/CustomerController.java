@@ -17,7 +17,7 @@ import com.niit.shoppingcart.model.Customer;
 public class CustomerController {
 @Autowired
 private CustomerService customerService;
-	@RequestMapping(value = "/all/registerCustomer", method = RequestMethod.GET)
+	@RequestMapping(value = "/registerCustomer", method = RequestMethod.GET)
 	public String getRegistrationForm(Model model) {
 
 		model.addAttribute("customer", new Customer());
@@ -25,7 +25,7 @@ private CustomerService customerService;
 		return "registercustomer";
 	}
 
-	@RequestMapping(value = "/all/registerdetails", method = RequestMethod.POST)
+	@RequestMapping(value = "/registerdetails", method = RequestMethod.POST)
 	public String registerCustomer(@Valid @ModelAttribute(value = "customer") Customer customer,BindingResult result,Model model) {
 		if(result.hasErrors())
 		{
