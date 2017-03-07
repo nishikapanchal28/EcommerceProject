@@ -19,14 +19,14 @@ import com.spring.service.CustomerService;
 public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
-	@RequestMapping(value="/all/registerCustomer" , method = RequestMethod.GET)
+	@RequestMapping(value="/registerCustomer" , method = RequestMethod.GET)
 	public String getRegistrationForm(Model model){
 		
 	model.addAttribute("customer", new Customer());
 
 	return "register";
 }
-	@RequestMapping(value = "/all/registerdetails", method = RequestMethod.POST)
+	@RequestMapping(value ="/registerdetails", method = RequestMethod.POST)
 	public String registerCustomer(@Valid@ModelAttribute(value = "customer") Customer customer, BindingResult result, Model model) {
 		if (result.hasErrors())
 			return "register";

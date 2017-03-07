@@ -55,4 +55,6 @@ public class ProductDaoImpl implements ProductDao {
 	sessionFactory.getCurrentSession().update(p);
 		
 	}
+
+	
 }

@@ -56,8 +56,8 @@ ${p.quantity }</td>
 ${p.category.categoryDetails}
 </td>
 <td>
-<c:url var="view" value="/editproduct?id=${p.id }"></c:url>
-					<a href="${edit}"><span class="glyphicon glyphicon-info-sign"></span></a>
+<c:url var="view" value="/viewproduct?id=${p.id }"></c:url>
+					<a href="${view }"><span class="glyphicon glyphicon-info-sign"></span></a>
 
 <c:url var="edit" value="/editproduct?id=${p.id}"></c:url>
 			<a href="${edit}"><span class="glyphicon glyphicon-edit"></span></a>

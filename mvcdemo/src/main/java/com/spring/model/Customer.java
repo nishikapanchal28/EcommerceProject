@@ -34,6 +34,7 @@ public class Customer {
 	private Users users;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="cart_id")
+	
 	private Cart cart;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="billingaddress_id")

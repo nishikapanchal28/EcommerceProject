@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
    <%@ page isELIgnored="false" %>
-      <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %> 
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>  
+      <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -37,14 +38,19 @@
       
       <c:if test="${pageContext.request.userPrincipal.name!=null}">
       
-<security:authorize access="hasRole('ROLE_ADMIN')">
+<security:authorize access="hasRole('ROLE_USER')">
+<li><a href="${cart }">cart</a>
 
-<c:url var="addproduct" value="/admin/addproduct"></c:url>
+ </security:authorize>
+ <c:url var="cart" value="/getcartId"></c:url> 
+ 
+	<security:authorize access="hasRole('ROLE_ADMIN')">
+    <li><a href="${addproduct }">Add New Product</a></li>
+     </security:authorize>
 
-      <li><a href="${addproduct }">Add New Product</a></li>
+      <c:url var="addproduct" value="/admin/addproduct"></c:url>
       
-      </security:authorize>
-      <c:url var="listofproducts" value="/all/listofproducts"></c:url>
+      <c:url var="listofproducts" value="/listofproducts"></c:url>
       
       <li><a href="${listofproducts}">View All Products</a>
      
@@ -53,31 +59,32 @@
                      Select by Category<b class="caret"></b></a>
 			<ul class="dropdown-menu">
 			
-			<c:url var="url1" value="/all/productsByCategory?item=New Arrivals"></c:url>
+			<c:url var="url1" value="/productsByCategory?item=New Arrivals"></c:url>
 			<li><a href="${url1}">New Arrivals</a></li>
 			
-			<c:url var="url2" value="/all/productsByCategory?item=Sales"></c:url>
+			<c:url var="url2" value="/productsByCategory?item=Sales"></c:url>
 			<li><a href="${url2}">Sales</a></li>
 			
-			<c:url var="url_3" value="/all/productsByCategory?item=General"></c:url>
+			<c:url var="url_3" value="/productsByCategory?item=General"></c:url>
 			<li><a href="${url_3}">General </a></li>
 			
 			</ul>
 			</li>
 			</c:if>
 			
-			
+			<c:if test="${pageContext.request.userPrincipal.name==null}">
 			<c:url var="login" value="/login"></c:url>
 			 <li><a href="${login }"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-			 
+			
 			 <c:url var="register" value="/registerCustomer"></c:url>
       <li><a href="${register}"><span class="glyphicon glyphicon-"></span>Register</a></li>
       
+      </c:if>
       
-     <li> <a href ="">welcome ${pageContext.request.userPrincipal.name}</a></li>
-      
+     <li> <a>welcome ${pageContext.request.userPrincipal.name}</a></li>
+     
       <c:if test="${pageContext.request.userPrincipal.name!=null}">
-           <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+           <li><a href="j_spring_security_logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
       </c:if>
       
     </ul>

@@ -16,7 +16,7 @@ ${error}
 ${logout}
 ${registrationSuccess }
   <div class="container">
-  <form:form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
+  <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
      <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue;">
   <center><B>LOGIN DETAILS</B> </center></div>
@@ -24,14 +24,14 @@ ${registrationSuccess }
     <div class="form-group">
       <label class="control-label col-sm-2" for="username">USER NAME:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="j_username" placeholder="Enter user name"/>
+        <input class="form-control" type="text" name="username" placeholder="Enter user name"/>
       </div>
     </div>
     
     <div class="form-group">
       <label class="control-label col-sm-2" for="password">PASSWORD:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="j_password" placeholder="Enter password"/>
+        <input class="form-control" type="password" name="password" placeholder="Enter password"/>
       </div>
     </div>
      <div class="form-group">        
@@ -48,7 +48,7 @@ ${registrationSuccess }
        <input type="submit" value="CANCEL" class="btn btn-info">
       </div>
     </div></div></div>
-        </form:form>
+        </form>
     </div>
 </body>
 </html>

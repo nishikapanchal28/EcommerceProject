@@ -69,7 +69,7 @@ public String productAdd(@ModelAttribute("product") Product product,HttpServletR
 	return "home";
 
 }
-@RequestMapping(value="/all/listofproducts" , method = RequestMethod.GET)
+@RequestMapping(value="/listofproducts" , method = RequestMethod.GET)
 public String getAllProducts(Model model){
 	List<Product> products=productService.listAllProducts();
 	model.addAttribute("productList",products);
@@ -117,7 +117,7 @@ if(result.hasErrors())
 	}
 	return "redirect:/listofproducts";
 }
-@RequestMapping("/all/productsByCategory")
+@RequestMapping("/productsByCategory")
 public String getProductsByCategory(@RequestParam(name="item") String item,
 		Model model){
 	
@@ -142,6 +142,12 @@ public String getProductsByCategory(@RequestParam(name="item") String item,
 	model.addAttribute("productList",newList);
 	//model.addAttribute("searchCondition",searchCondition);
 	return "listofproducts";
+}
+@RequestMapping("/viewproduct/{id}")
+public String viewProduct(@PathVariable int id,Model model){
+	Product p=productService.getById(id);
+	model.addAttribute("product",p);
+return "productspecifications";
 }
 }
 
