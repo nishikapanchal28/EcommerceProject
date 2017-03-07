@@ -12,7 +12,7 @@
 footer {
     background-color: #2d2d30;
     color: #f5f5f5;
-    padding: 32px;
+    padding: 10px;
 }
 
 footer a {
@@ -26,18 +26,10 @@ footer a:hover {
 </style>
 
 <footer class="text-center">
-  <a class="up-arrow" href="" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
+  <br><br>
   <p>@Copywrite All rights reserved <br>
   by nishikapanchal <a href="" data-toggle="tooltip" title=""></a></p> 
 </footer>
 
-<script>
-$(document).ready(function(){
-    // Initialize Tooltip
-    $('[data-toggle="tooltip"]').tooltip(); 
-})
-</script>
 </body>
 </html>

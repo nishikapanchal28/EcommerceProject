@@ -74,10 +74,10 @@
 			
 			<c:if test="${pageContext.request.userPrincipal.name==null}">
 			<c:url var="login" value="/login"></c:url>
-			 <li><a href="${login }"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			 <li><a href="${login }"><span class="glyphicon glyphicon-log-in"> </span>Login</a></li>
 			
 			 <c:url var="register" value="/registerCustomer"></c:url>
-      <li><a href="${register}"><span class="glyphicon glyphicon-"></span>Register</a></li>
+      <li><a href="${register}"><span class="glyphicon glyphicon-user"> </span>Register</a></li>
       
       </c:if>
       

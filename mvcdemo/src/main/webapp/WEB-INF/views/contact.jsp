@@ -14,7 +14,11 @@
 </head>
 <body>
 <div class="container">
-  <h3 class="text-center">Contact</h3>
+<div class="panel panel-default">
+     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue;">
+  <center><B>CONTACT</B> </center></div>
+       <div class="panel-body">
+  <h3 class="text-center"></h3>
   <p class="text-center"><em></em></p>
   <div class="row test">
     <div class="col-md-4">
@@ -41,7 +45,8 @@
     </div>
   </div>
 </div>
-
+</div>
+</div>
 
 
 </body>

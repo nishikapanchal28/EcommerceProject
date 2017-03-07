@@ -45,7 +45,7 @@ ${registrationSuccess }
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
        <input type="submit" value="SUBMIT" align="right"class="btn btn-info">
-       <input type="submit" value="CANCEL" class="btn btn-info">
+       <input  value="CANCEL" class="btn btn-info">
       </div>
     </div></div></div>
         </form>
