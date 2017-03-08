@@ -9,6 +9,8 @@ import javax.persistence.OneToOne;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Users implements Serializable{
 
@@ -23,6 +25,7 @@ private String username;
 private String password;
 private boolean enabled=true;
 @OneToOne(mappedBy="users")
+@JsonIgnore
 private Customer customer;
 
 public int getId() {

@@ -30,7 +30,7 @@ public String getCartId(Model model){
 	model.addAttribute("cartId",cartId);
 	return "cart";
 }
-	@RequestMapping("/cart/getCart/{cartId}")
+	@RequestMapping("/getCart/{cartId}")
 	public @ResponseBody Cart getCart(@PathVariable int cartId){
 	Cart cart=cartservice.getCart(cartId);
 	return cart;

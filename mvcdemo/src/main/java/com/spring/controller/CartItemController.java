@@ -16,6 +16,7 @@ import com.spring.model.CartItem;
 import com.spring.model.Customer;
 import com.spring.model.Product;
 import com.spring.service.CartItemService;
+import com.spring.service.CartService;
 import com.spring.service.CustomerService;
 import com.spring.service.ProductService;
 
@@ -27,6 +28,8 @@ public class CartItemController {
 	private CartItemService cartitemservice;
 	@Autowired
 	private CustomerService customerservice;
+	@Autowired
+	private CartService cartservice;
 	@ResponseStatus(value=HttpStatus.NO_CONTENT)
 @RequestMapping("/addCartItem/{p.id}")
 public void addCartItem(@PathVariable(value="pid") int productId){
@@ -58,4 +61,18 @@ public void addCartItem(@PathVariable(value="pid") int productId){
 	cartItem.setCart(cart);//set cart id
 	cartitemservice.addCartItem(cartItem); //insert query	
 }
+	@RequestMapping("/removeCartItem/{cartItemId}")
+	@ResponseStatus(value=HttpStatus.NO_CONTENT)
+	public void removeCartItem(@PathVariable int cartItemId){
+		CartItem cartItem=cartitemservice.getCartItem(cartItemId);
+		cartitemservice.removeCartItem(cartItem);
+	}
+	@RequestMapping("/removeAllCartItems/{cartId}")
+	@ResponseStatus(value=HttpStatus.NO_CONTENT)
+	public void removeAllCartItems(@PathVariable int cartId){
+		Cart cart=cartservice.getCart(cartId);
+		cartitemservice.removeAllCartItems(cart);
+	}
+
+
 }

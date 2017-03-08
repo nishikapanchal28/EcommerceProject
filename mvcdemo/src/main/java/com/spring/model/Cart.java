@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 
 public class Cart implements Serializable{
@@ -24,6 +26,7 @@ public class Cart implements Serializable{
 	private int id;
 	private double grandTotal;
 	@OneToOne
+	@JsonIgnore
 	private Customer customer;
 	@OneToMany(mappedBy="cart" , cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private List<CartItem> cartItem;
