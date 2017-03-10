@@ -6,11 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About us</title>
-<style type="text/css">
-.container {
-    padding: 80px 120px;
-}
-</style>
 </head>
 <body>
 <div class="container text-center">

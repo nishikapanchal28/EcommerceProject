@@ -9,11 +9,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
-      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
       
-       <!-- JQuery -->
-   
+      <!-- JQuery (for searchCondition-->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+<link
+	href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"
+	rel="stylesheet">
 <title>Insert title here</title>
 <script>
 $(document).ready(function(){
@@ -37,7 +41,11 @@ $(document).ready(function(){
 <th>PRICE</th>
 <th>QUANTITY</th>
 <th>PRODUCT CATEGORY</th>
-<th>VIEW/  EDIT/  DELETE</th></tr></thead>
+<th>VIEW</th>
+<security:authorize access="hasRole('ROLE_ADMIN')">
+<th>EDIT</th>
+<th>DELETE</th>
+</security:authorize></tr></thead>
 <c:forEach var="p" items="${productList}">
 <tbody>
 <tr class="info"><td>
@@ -58,12 +66,18 @@ ${p.category.categoryDetails}
 <td>
 <c:url var="view" value="/viewproduct?id=${p.id }"></c:url>
 					<a href="${view }"><span class="glyphicon glyphicon-info-sign"></span></a>
-
-<c:url var="edit" value="/editproduct?id=${p.id}"></c:url>
+					</td>
+					<td>
+<security:authorize access="hasRole('ROLE_ADMIN')">
+<c:url var="edit" value="/admin/editproduct?id=${p.id}"></c:url>
 			<a href="${edit}"><span class="glyphicon glyphicon-edit"></span></a>
-			
-<c:url var="delete" value="/deleteproduct/${p.id }"></c:url>
+			</security:authorize>
+			</td>
+			<td>
+			<security:authorize access="hasRole('ROLE_ADMIN')">
+<c:url var="delete" value="/admin/deleteproduct/${p.id }"></c:url>
 					<a href="${delete}"><span class="glyphicon glyphicon-remove-sign"></span></a>
+					</security:authorize>
 </td>
 </tr>
 </c:forEach>

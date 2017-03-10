@@ -18,9 +18,9 @@ public PersonController(){
 public String login(@Valid @RequestParam(value="error", required=false) String error, @RequestParam(value="logout", required= false) String logout ,
 		Model model){
 	if(error != null)
-		model.addAttribute("error", "INVALID USERNAME OR PASSWORD PLEASE TRY AGAIN ");
+		model.addAttribute("error","INVALID USERNAME OR PASSWORD PLEASE TRY AGAIN!!!");
 	if(logout != null)
-		model.addAttribute("logout", "YOU HAVE SUCCESSFULLY LOGGED OUT " );
+		model.addAttribute("logout","YOU HAVE SUCCESSFULLY LOGGED OUT !! PLEASE LOGIN AGAIN !!");
 	return "login";
 }
 }

@@ -11,16 +11,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+  <style>
+body  {
+    background-image: ('14.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
 <body>
-${error}
-${logout}
-${registrationSuccess }
+
   <div class="container">
   <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue;">
+     <div class="panel-heading" style= min-height:10 background-color="DeepSkyBlue">
   <center><B>LOGIN DETAILS</B> </center></div>
        <div class="panel-body">
+      ${error}
+${logout}
+${registrationSuccess }
     <div class="form-group">
       <label class="control-label col-sm-2" for="username">USER NAME:</label>
       <div class="col-sm-10">
@@ -45,7 +53,7 @@ ${registrationSuccess }
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
        <input type="submit" value="SUBMIT" align="right"class="btn btn-info">
-       <input  value="CANCEL" class="btn btn-info">
+       <input  type="submit" value="CANCEL" class="btn btn-info">
       </div>
     </div></div></div>
         </form>

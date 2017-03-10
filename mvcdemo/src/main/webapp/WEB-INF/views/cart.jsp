@@ -15,7 +15,7 @@
 </tr>
 </thead>
 
-<tr ng-repeat="cartItem in cart.cartItems">
+<tr ng-repeat="cartItem in cart.cartItem">
 
 <td><a href="" class="btn btn-danger" pull-left ng-click="clearCart()"></a>
 <span class="glyphicon glyphicon-remove"></span></td>

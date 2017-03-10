@@ -39,16 +39,17 @@
       <c:if test="${pageContext.request.userPrincipal.name!=null}">
       
 <security:authorize access="hasRole('ROLE_USER')">
+ <c:url var="cart" value="/getCart"></c:url> 
 <li><a href="${cart }">cart</a>
-
  </security:authorize>
- <c:url var="cart" value="/getcartId"></c:url> 
- 
+
+
 	<security:authorize access="hasRole('ROLE_ADMIN')">
-    <li><a href="${addproduct }">Add New Product</a></li>
+	 <c:url var="addproduct" value="/admin/addproduct"></c:url>
+    <li><a href="${addproduct }">Add New Product</a></li>   
      </security:authorize>
 
-      <c:url var="addproduct" value="/admin/addproduct"></c:url>
+    
       
       <c:url var="listofproducts" value="/listofproducts"></c:url>
       

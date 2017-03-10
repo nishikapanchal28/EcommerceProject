@@ -6,23 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contact us</title>
-<style type="text/css">
-.container {
-    padding: 80px 120px;
-}
-</style>
+
 </head>
 <body>
 <div class="container">
 <div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue;">
+     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue">
   <center><B>CONTACT</B> </center></div>
        <div class="panel-body">
   <h3 class="text-center"></h3>
   <p class="text-center"><em></em></p>
   <div class="row test">
     <div class="col-md-4">
-      <p>Drop a mail</p>
+      <p>Contact us by Dropping a mail</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>india</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 22222222</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: nishikpanchal@gmail.com</p> 

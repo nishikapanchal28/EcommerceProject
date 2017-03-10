@@ -143,10 +143,10 @@ public String getProductsByCategory(@RequestParam(name="item") String item,
 	//model.addAttribute("searchCondition",searchCondition);
 	return "listofproducts";
 }
-@RequestMapping("/viewproduct/{id}")
-public String viewProduct(@PathVariable int id,Model model){
-	Product p=productService.getById(id);
-	model.addAttribute("product",p);
+@RequestMapping(value="/viewproduct", method=RequestMethod.GET)
+public String viewProduct(Model model){
+	
+	model.addAttribute("product", new Product());
 return "productspecifications";
 }
 }

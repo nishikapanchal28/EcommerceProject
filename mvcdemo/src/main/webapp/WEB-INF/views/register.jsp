@@ -68,7 +68,7 @@
  <div class="form-group">
       <label class="control-label col-sm-2" for="password">password   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="users.password"  placeholder="Enter password"/>
+        <form:input type="password" class="form-control" path="users.password"  placeholder="Enter password"/>
                   <form:errors path="users.password"></form:errors>
         
       </div>

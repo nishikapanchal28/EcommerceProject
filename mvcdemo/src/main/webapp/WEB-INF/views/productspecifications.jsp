@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 </head>
-<body ng-app="app"  ng-controller="ProductController">
-	<div > 
+<body>hello
+	<%-- <div > 
 		<div class="page-header">
 			<b>PRODUCT DETAILS</b>
 		</div>
@@ -37,12 +37,9 @@
 			<tr>
 			<td>
 			</td>
-			
 			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
 			</tr>
 		</table>
-
-	</div>
-	<script src="<c:url value="/resources/js/Controller.js"></c:url>"></script>
+	</div> --%>
 </body>
 </html>
