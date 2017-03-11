@@ -6,7 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contact us</title>
-
+  <style>
+body{
+background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+</style>
 </head>
 <body>
 <div class="container">

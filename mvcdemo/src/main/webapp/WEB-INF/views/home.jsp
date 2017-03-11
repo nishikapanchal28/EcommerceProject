@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <style>
+body{
+background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+</style>
   </head>
 <body><center>
 <div class="container text-center"></div>
 <div class="container text-center">
 <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  <B>WELCOME TO HOME PAGE</B></div>
+  <B>WELCOME</B></div>
        <div class="panel-body">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">

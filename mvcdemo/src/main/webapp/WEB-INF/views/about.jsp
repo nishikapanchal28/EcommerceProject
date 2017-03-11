@@ -6,6 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About us</title>
+<style>
+body{
+background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_1024x1024.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+</style>
 </head>
 <body>
 <div class="container text-center">

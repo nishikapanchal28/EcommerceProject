@@ -13,6 +13,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
+<style>
+body{
+background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Photography-13.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+</style>
 </head>
 <body>
 <div class="container">

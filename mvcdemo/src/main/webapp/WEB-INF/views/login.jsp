@@ -13,9 +13,10 @@
   </head>
   <style>
 body  {
-    background-image: ('14.png');
+    background-image: url("resources/images/Dollarphotoclub_84706998.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+   
+  background-size:cover;
 }
 </style>
 <body>
