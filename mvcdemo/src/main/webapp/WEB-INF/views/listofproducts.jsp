@@ -18,7 +18,7 @@
 <link
 	href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"
 	rel="stylesheet">
-<title>Insert title here</title>
+<title>All products</title>
 <script>
 $(document).ready(function(){
 	var searchCondition=${searchCondition};
@@ -28,10 +28,26 @@ $(document).ready(function(){
 	})
 });
 </script>
+<style>
+img{
+  border-radius: 50%;
+  
+}</style>
+<style>
+body{
+background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_1024x1024.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+div.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
 <div class="container text-left">
-<div class="panel panel-default">
+<div class="panel panel-default" class="sansserif">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>LIST OF ALL PRODUCTS</B></center></div>
        <div class="panel-body">
@@ -65,18 +81,18 @@ ${p.category.categoryDetails}
 </td>
 <td>
 <c:url var="view" value="/viewproduct?id=${p.id }"></c:url>
-					<a href="${view }"><span class="glyphicon glyphicon-info-sign"></span></a>
+					<a href="${view }"><span class="glyphicon glyphicon-info-sign" style="font-size:20px"></span></a>
 					</td>
 					<td>
 <security:authorize access="hasRole('ROLE_ADMIN')">
 <c:url var="edit" value="/admin/editproduct?id=${p.id}"></c:url>
-			<a href="${edit}"><span class="glyphicon glyphicon-edit"></span></a>
+			<a href="${edit}"><span class="glyphicon glyphicon-edit" style="font-size:20px"></span></a>
 			</security:authorize>
 			</td>
 			<td>
 			<security:authorize access="hasRole('ROLE_ADMIN')">
 <c:url var="delete" value="/admin/deleteproduct/${p.id }"></c:url>
-					<a href="${delete}"><span class="glyphicon glyphicon-remove-sign"></span></a>
+					<a href="${delete}"><span class="glyphicon glyphicon-remove-sign" style="font-size:20px"></span></a>
 					</security:authorize>
 </td>
 </tr>

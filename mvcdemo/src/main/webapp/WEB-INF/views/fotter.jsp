@@ -14,8 +14,10 @@
 </style>
   </head>
  <body>
+ <div class="container">
 <footer class="container-fluid bg-4 text-center">
   <p>made by nishikapanchal</a></p> 
 </footer>
+</div>
 </body>
 </html>

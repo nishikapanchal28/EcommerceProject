@@ -18,7 +18,13 @@ body  {
    
   background-size:cover;
 }
+p1{
+font-style: italic;
+color: red;
+text-align: center;
+}
 </style>
+
 <body>
 
   <div class="container">
@@ -27,9 +33,9 @@ body  {
      <div class="panel-heading" style= min-height:10 background-color="DeepSkyBlue">
   <center><B>LOGIN DETAILS</B> </center></div>
        <div class="panel-body">
-      ${error}
-${logout}
-${registrationSuccess }
+     <p1>${error}
+		${logout}
+		${registrationSuccess }</p1>
     <div class="form-group">
       <label class="control-label col-sm-2" for="username">USER NAME:</label>
       <div class="col-sm-10">

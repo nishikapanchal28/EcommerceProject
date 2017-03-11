@@ -147,7 +147,7 @@ public String getProductsByCategory(@RequestParam(name="item") String item,
 public String viewProduct(Model model){
 	
 	model.addAttribute("product", new Product());
-return "productspecifications";
+return "productview";
 }
 }
 

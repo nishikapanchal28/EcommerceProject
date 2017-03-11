@@ -20,9 +20,17 @@
 
     <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style>
+    div.relative{
+    position: relative;
+   top:10px;
+   
     
+    }
+    </style>
   </head>
-<body>
+<body><div class="relative">
+<div class="container">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -91,5 +99,7 @@
     </ul>
   </div>
 </nav>
+</div>
+</div>
 </body>
 </html>

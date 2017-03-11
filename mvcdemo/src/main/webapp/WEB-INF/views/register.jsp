@@ -24,28 +24,29 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
 </head>
 <body>
 <div class="container">
-
+<div class="panel panel-default">
 <form:form action="registerdetails" commandName="customer" method="POST" class="form-horizontal">
+
  <div class="panel panel-default">
-     <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  YOUR PERSONAL DETAILS </div>
+     <div class="panel-heading" style="background-color:DeepSkyBlue">
+  <center>YOUR PERSONAL DETAILS</center> </div>
        <div class="panel-body">
 <div class="form-group">
-      <label class="control-label col-sm-2" for="firstname"> first name  </label>
+      <label class="control-label col-sm-2" for="firstname"> FIRST NAME: </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="firstname" placeholder="Enter the first name"/>
         <form:errors path="firstname"></form:errors>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="lastname">last name</label>
+      <label class="control-label col-sm-2" for="lastname">LAST NAME:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="lastname" placeholder="Enter the last name "/>
           <form:errors path="lastname"></form:errors>
       </div>
       </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email"> email </label>
+      <label class="control-label col-sm-2" for="email"> EMAIL:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="email"  placeholder="Enter email"/>
                   <form:errors path="lastname"></form:errors>
@@ -53,7 +54,7 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
       </div>
     </div>
       <div class="form-group">
-      <label class="control-label col-sm-2" for="phonenumber">phone number   </label>
+      <label class="control-label col-sm-2" for="phonenumber">PHONE NUMBER: </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="phonenumber"  placeholder="Enter phone number "/>
                           <form:errors path="phonenumber"></form:errors>
@@ -63,18 +64,18 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
     </div>
     </div>
     <div class="panel panel-default">
-     <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  YOUR LOGIN DETAILS </div>
+     <div class="panel-heading" style="background-color:DeepSkyBlue">
+  <center>YOUR LOGIN DETAILS</center> </div>
        <div class="panel-body">
       <div class="form-group">
-      <label class="control-label col-sm-2" for="username">user name   </label>
+      <label class="control-label col-sm-2" for="username">USER NAME:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="users.username"  placeholder="Enter user name "/>
           <form:errors path="users.username"></form:errors>
       </div>
     </div>
  <div class="form-group">
-      <label class="control-label col-sm-2" for="password">password   </label>
+      <label class="control-label col-sm-2" for="password">PASSWORD:</label>
       <div class="col-sm-10">
         <form:input type="password" class="form-control" path="users.password"  placeholder="Enter password"/>
                   <form:errors path="users.password"></form:errors>
@@ -84,41 +85,41 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
     </div>
     </div>
      <div class="panel panel-default">
-     <div class="panel-heading" style="background-color:DeepSkyBlue;">
-   BILLING ADDRESS DETAILS </div>
+     <div class="panel-heading" style="background-color:DeepSkyBlue">
+   <center>BILLING ADDRESS DETAILS </center></div>
        <div class="panel-body">
 <div class="form-group">
-      <label class="control-label col-sm-2" for="apartmentnumber">apartment number   </label>
+      <label class="control-label col-sm-2" for="apartmentnumber">APARTMENT NUMBER:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.apartmentnumber"  placeholder="Enter quantity"/>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="streetname">street name   </label>
+      <label class="control-label col-sm-2" for="streetname">STREET NAME:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.streetname"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="city"> city   </label>
+      <label class="control-label col-sm-2" for="city"> CITY: </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.city"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="state"> state   </label>
+      <label class="control-label col-sm-2" for="state"> STATE:</label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.state"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="country"> country   </label>
+      <label class="control-label col-sm-2" for="country"> COUNTRY:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.country"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="zipcode"> zip code   </label>
+      <label class="control-label col-sm-2" for="zipcode"> ZIP CODE:   </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="billingaddress.zipcode"  placeholder="Enter quantity"/>
       </div>
@@ -126,41 +127,41 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
     </div>
     </div>
      <div class="panel panel-default">
-     <div class="panel-heading" style="background-color:DeepSkyBlue;">
-     SHIPPING ADDRESS DETAILS </div>
+     <div class="panel-heading" style="background-color:DeepSkyBlue">
+     <center>SHIPPING ADDRESS DETAILS</center> </div>
         <div class="panel-body">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="apartmentnumber">apartment number   </label>
+      <label class="control-label col-sm-2" for="apartmentnumber">APARTMENT NUMBER:   </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.apartmentnumber"  placeholder="Enter quantity"/>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="streetname">street name   </label>
+      <label class="control-label col-sm-2" for="streetname">STREET NAME:   </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.streetname"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="city"> city   </label>
+      <label class="control-label col-sm-2" for="city"> CITY : </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.city"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="state"> state   </label>
+      <label class="control-label col-sm-2" for="state"> STATE:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.state"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="country"> country   </label>
+      <label class="control-label col-sm-2" for="country"> COUNTRY:  </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.country"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="zipcode"> zip code   </label>
+      <label class="control-label col-sm-2" for="zipcode"> ZIP CODE:   </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.zipcode"  placeholder="Enter quantity"/>
       </div>
@@ -174,6 +175,7 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
 </div>
 </div>
     </form:form>
+</div>
 </div>
 </body>
 </html>
