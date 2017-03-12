@@ -36,7 +36,7 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/Bags-06.jpg" alt="" width="80%" height="400px" margin="auto">
+        <img src="resources/images/" alt="" width="80%" height="400px" margin="auto">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -44,7 +44,7 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
       </div>
 
       <div class="item">
-        <img src="resources/images/img-1.jpg" alt="" width="600" height="200">
+        <img src="resources/images/" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -52,7 +52,7 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
       </div>
    
       <div class="item">
-        <img src="resources/images/unforgetable-Designer-Bags-4.jpg" alt="" width="600" height="200">
+        <img src="resources/images/" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>

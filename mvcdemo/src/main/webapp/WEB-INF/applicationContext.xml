@@ -42,6 +42,7 @@
 				<value>com.spring.model.ShippingAddress</value>
 				<value>com.spring.model.Authorities</value>
 				<value>com.spring.model.CartItem</value>
+				<value>com.spring.model.Contact</value>
 			</list>
 		</property>
 
