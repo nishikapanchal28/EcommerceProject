@@ -14,7 +14,7 @@
    
 <script  type="text/javascript">
 $(function(){
-$('input[name=mfg]').datepicker({
+$('input[type=date]').datepicker({
 	format:'YYYY-MM-DD'
 });	
 });
@@ -62,10 +62,10 @@ $('input[name=mfg]').datepicker({
       </div>
     </div>
      <div class="form-group">
-     <label class="control-label col-sm-2" for="mfg" name="mfg" >MFG DATE:</label>
+     <label class="control-label col-sm-2" for="mfg">MFG DATE:</label>
         <div class="col-sm-10">
-      <form:input path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
-      <form:errors path="mfg" cssStyle="color:#ff0000"></form:errors>
+      <form:input type="date" path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
+  
       </div>
       </div>
     <div class="form-group">
