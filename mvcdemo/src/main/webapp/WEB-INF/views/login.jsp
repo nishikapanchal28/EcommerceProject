@@ -23,6 +23,12 @@ font-style: italic;
 color: red;
 text-align: center;
 }
+div.panel{
+ position: absolute;
+    right: 300px;
+    width: 500px;
+    height: 250px;
+}
 </style>
 
 <body>
@@ -31,20 +37,20 @@ text-align: center;
   <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
      <div class="panel-heading" style= min-height:10 background-color="DeepSkyBlue">
-  <center><B>LOGIN DETAILS</B> </center></div>
+  <center><B>LOGIN</B> </center></div>
        <div class="panel-body">
      <p1>${error}
 		${logout}
 		${registrationSuccess }</p1>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="username">USER NAME:</label>
+      <label class="control-label col-sm-2" for="username"></label>
       <div class="col-sm-10">
         <input class="form-control" type="text" name="username" placeholder="Enter user name"/>
       </div>
     </div>
     
     <div class="form-group">
-      <label class="control-label col-sm-2" for="password">PASSWORD:</label>
+      <label class="control-label col-sm-2" for="password"></label>
       <div class="col-sm-10">
         <input class="form-control" type="password" name="password" placeholder="Enter password"/>
       </div>
@@ -62,9 +68,13 @@ text-align: center;
        <input type="submit" value="SUBMIT" align="right"class="btn btn-info">
        <input  type="submit" value="CANCEL" class="btn btn-info">
       </div>
-    </div></div></div>
-        </form>
+  
+  
+      </div>
     </div>
+        </form>
+     </div>
+   
 </body>
 </html>
 <%@ include file ="fotter.jsp" %>

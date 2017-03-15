@@ -8,38 +8,42 @@
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 </head>
-<body>hello
-	<%-- <div > 
-		<div class="page-header">
-			<b>PRODUCT DETAILS</b>
-		</div>
+<body>
+	 
+	 <div class="container">
+<div class="panel panel-default">
+     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue">
+  <center><B>PRODUCT SPECIFICATIONS </B> </center></div>
+       <div class="panel-body">
 		<table class="table">
 			<tr>
-				<td>Product Name :</td>
+				<td>PRODUCT NAME:</td>
 				<td>${product.productname }</td>
 			</tr>
 			<tr>
-				<td>Product Description</td>
+				<td>PRODUCT DESCRIPTION:</td>
 				<td>${product.description }</td>
 			</tr>
 			<tr>
-				<td>Product Price</td>
+				<td>PRODUCT PRICE:</td>
 				<td>${product.price }</td>
 			</tr>
 			<tr>
-				<td>Category details</td>
+				<td>CATEGORY DETAILS:</td>
 				<td>${product.category.categoryDetails }</td>
 			</tr>
 			<tr>
-				<td>Manufacturing Date</td>
+				<td>MANUFACTURING DATE:</td>
 				<td>${product.mfg }</td>
 			</tr>
 			<tr>
-			<td>
-			</td>
+			<td>ADD TO CART:</td>
 			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
 			</tr>
 		</table>
-	</div> --%>
+	</div>
+	</div>
+	</div>
+	
 </body>
 </html>

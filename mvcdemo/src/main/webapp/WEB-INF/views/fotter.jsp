@@ -8,8 +8,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
 .bg-4 { 
+ right:50px;
+ width:1000px;
+ height:20px;
     background-color: #2f2f2f;
     color: #ffffff;
+    
 }
 </style>
   </head>

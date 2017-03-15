@@ -32,7 +32,9 @@ background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jp
     </div>
     <div class="col-md-8">
       <div class="row">
+      <form action="addcontact" method="post">
         <div class="col-sm-6 form-group">
+        
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
@@ -45,12 +47,13 @@ background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jp
           <button class="btn pull-right" type="submit">Send</button>
         </div>
       </div> 
+     </form>
     </div>
   </div>
-</div>
-</div>
-</div>
 
+</div>
+</div>
+</div>
 
 </body>
 </html>
