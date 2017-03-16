@@ -20,7 +20,12 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
    
   background-size:cover;
 }
+div.panel{
+ 
+      background: rgba(130,130,130,.3);
+}
 </style>
+
 </head>
 <body>
 <div class="container">

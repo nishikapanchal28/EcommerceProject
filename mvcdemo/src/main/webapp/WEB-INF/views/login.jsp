@@ -28,6 +28,7 @@ div.panel{
     right: 300px;
     width: 500px;
     height: 250px;
+      background: rgba(130,130,130,.3);
 }
 </style>
 
@@ -36,7 +37,7 @@ div.panel{
   <div class="container">
   <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10 background-color="DeepSkyBlue">
+     <div class="panel-heading" style= min-height:10>
   <center><B>LOGIN</B> </center></div>
        <div class="panel-body">
      <p1>${error}
