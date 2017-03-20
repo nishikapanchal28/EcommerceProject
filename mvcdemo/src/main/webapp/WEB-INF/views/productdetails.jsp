@@ -23,56 +23,57 @@ $('input[type=date]').datepicker({
 <body>
 <div class="container">
 <c:url value="/admin/addproduct" var="url"></c:url>
-<form action="addproduct" method="post" class="form-horizontal" enctype="multipart/form-data">
+<form:form action="addproduct" class="form-horizontal" method="post" commandName="product" enctype="multipart/form-data">
 <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>PRODUCT DETAILS</B></center> </div>
        <div class="panel-body">
 <div class="form-group">
 <label for="id"></label>
+<form:hidden  path=""/>
 </div>
 <div class="form-group">
       <label class="control-label col-sm-2" for="productname">PRODUCT NAME:</label>
       <div class="col-sm-10">
-        <input class="form-control" type="text" name="productname" placeholder="Enter the name of product"/>
+        <form:input class="form-control" type="text" path="productname" placeholder="Enter the name of product"/>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="price">PRICE:</label>
       <div class="col-sm-10">
-        <input class="form-control" type="text" name="price" placeholder="Enter the price of product"/>
+        <form:input class="form-control" type="text" path="price" placeholder="Enter the price of product"/>
       </div>
       </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="manufacturerename">MANUFACTURER NAME:</label>
       <div class="col-sm-10">
-        <input class="form-control" type="text" name="manufacturerename"  placeholder="Enter the name of manufacturer"/>
+        <form:input class="form-control" type="text" path="manufacturerename"  placeholder="Enter the name of manufacturer"/>
       </div>
     </div>
       <div class="form-group">
       <label class="control-label col-sm-2" for="quantity">QUANTITY:</label>
       <div class="col-sm-10">
-        <input class="form-control" type="text" name="quantity"  placeholder="Enter quantity"/>
+        <form:input class="form-control" type="text" path="quantity"  placeholder="Enter quantity"/>
       </div>
     </div>
      <div class="form-group">
-     <label class="control-label col-sm-2" for="mfg" >MFG DATE:</label>
+     <label class="control-label col-sm-2" for="mfg">MFG DATE:</label>
         <div class="col-sm-10">
-      <input  type="date"  name="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
+      <form:input  type="date"  path="mfg" class="form-control" placeholder="Enter date of manufacturing"/>
       </div>
       </div>
     <div class="form-group">
 <label class="control-label col-sm-2" class="radio-inline"  for="category">CATEGORY:</label> 
 <c:forEach var="c" items="${categories}">
-<radiobutton name="category.id" value="${c.id}"/>${c.categoryDetails }
+<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
 </c:forEach>
 
 </div>
   <div class="form-group">
       <label class="control-label col-sm-2" for="image">IMAGE:</label>
-      <input type="text" name="images" type="file" />
+      <input  name="images" type="file"/>
     </div>
-
+    
 <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
@@ -82,7 +83,7 @@ $('input[type=date]').datepicker({
 </div>
 </div>
 </div>
-</form>
+</form:form>
 </div>
 </body>
 </html>

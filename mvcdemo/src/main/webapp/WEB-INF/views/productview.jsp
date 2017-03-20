@@ -8,8 +8,7 @@
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 </head>
-<body>
-	 
+<body ng-app="app"  ng-controller="ProductController">
 	 <div class="container">
 <div class="panel panel-default">
      <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue">
@@ -44,6 +43,6 @@
 	</div>
 	</div>
 	</div>
-	
+	<script src="<c:url value="/resources/js/Controller.js"></c:url>"></script>
 </body>
 </html>

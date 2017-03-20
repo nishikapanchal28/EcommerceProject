@@ -80,7 +80,7 @@ ${p.quantity }</td>
 ${p.category.categoryDetails}
 </td>
 <td>
-<c:url var="view" value="/viewproduct?id=${p.id }"></c:url>
+<c:url var="view" value="/productview?id=${p.id }"></c:url>
 					<a href="${view }"><span class="glyphicon glyphicon-info-sign" style="font-size:20px"></span></a>
 					</td>
 					<td>

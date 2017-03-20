@@ -23,17 +23,15 @@ font-style: italic;
 color: red;
 text-align: center;
 }
-div.panel{
+panel{
  position: absolute;
     right: 300px;
     width: 500px;
     height: 250px;
-      background: rgba(130,130,130,.3);
+    background: rgba(130,130,130,.3);
 }
 </style>
-
 <body>
-
   <div class="container">
   <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
   <div class="panel panel-default">
@@ -66,16 +64,14 @@ div.panel{
      <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-       <input type="submit" value="SUBMIT" align="right"class="btn btn-info">
-       <input  type="submit" value="CANCEL" class="btn btn-info">
+       <input type="submit" value="SUBMIT" align="right"class="btn">
+       <input  type="submit" value="CANCEL" class="btn">
       </div>
-  
-  
+      </div>
       </div>
     </div>
         </form>
      </div>
-   
 </body>
 </html>
 <%@ include file ="fotter.jsp" %>

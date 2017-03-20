@@ -17,6 +17,7 @@ public class Contact implements Serializable{
 	private static final long serialVersionUID = -3079688757786785611L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 private String name;
 	@Email
 private String email;
@@ -38,6 +39,12 @@ public String getComment() {
 }
 public void setComment(String comment) {
 	this.comment = comment;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
 }
 
 }

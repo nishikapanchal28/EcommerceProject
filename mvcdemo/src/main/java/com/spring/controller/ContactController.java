@@ -2,6 +2,7 @@ package com.spring.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +14,9 @@ import com.spring.service.ContactService;;
 
 @Controller
 public class ContactController {
+	@Autowired
+	private ContactService contactservice;
+	
 public ContactController(){
 	System.out.println("creating contact controller");
 	
@@ -25,9 +29,7 @@ public String contactus(Model model){
 }
 @RequestMapping(value="/addcontact", method=RequestMethod.POST)
 public String Addcontact(@ModelAttribute("contact") Contact contact,HttpServletRequest request) {
-	ContactService.saveContact(contact);
-	
-	
+	contactservice.saveContact(contact);
 	return "home";
 }
 

@@ -41,7 +41,7 @@ background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jp
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <textarea class="form-control" id="comments" name="comment" placeholder="Comment" rows="5"></textarea>
       <div class="row">
         <div class="col-md-12 form-group">
           <button class="btn pull-right" type="submit">Send</button>

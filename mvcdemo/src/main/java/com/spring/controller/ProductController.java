@@ -38,7 +38,7 @@ public class ProductController {
 	this.productService=productService;
 	System.out.println("PRODUCTSERVICE " + productService);
 }
-@RequestMapping("/admin/productdetails")
+@RequestMapping(value="/admin/productdetails", method=RequestMethod.GET)
 public String getproductdetails(Model model){
  model.addAttribute("product", new Product());
  model.addAttribute("categories",categoryService.getCategories());
@@ -143,11 +143,12 @@ public String getProductsByCategory(@RequestParam(name="item") String item,
 	//model.addAttribute("searchCondition",searchCondition);
 	return "listofproducts";
 }
-@RequestMapping(value="/viewproduct", method=RequestMethod.GET)
-public String viewProduct(Model model){
-	
-	model.addAttribute("product", new Product());
-return "productview";
+
+@RequestMapping(value="/productview")
+public String viewProduct(@RequestParam("id") int id ,Model model){
+	Product p=productService.getById(id);
+	model.addAttribute("product", p);
+    return "productview";
 }
 }
 
