@@ -19,10 +19,7 @@
 				<td>PRODUCT NAME:</td>
 				<td>${product.productname }</td>
 			</tr>
-			<tr>
-				<td>PRODUCT DESCRIPTION:</td>
-				<td>${product.description }</td>
-			</tr>
+			
 			<tr>
 				<td>PRODUCT PRICE:</td>
 				<td>${product.price }</td>
@@ -46,3 +43,4 @@
 	<script src="<c:url value="/resources/js/Controller.js"></c:url>"></script>
 </body>
 </html>
+<%@ include file="fotter.jsp" %>

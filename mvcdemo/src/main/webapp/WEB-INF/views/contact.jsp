@@ -16,10 +16,10 @@ background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jp
 </style>
 </head>
 <body>
-<div class="container">
-<div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue">
-  <center><B>CONTACT</B> </center></div>
+<div class="container text-left">
+<div class="panel panel-default" class="sansserif">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>CONTACT</B></center></div>
        <div class="panel-body">
   <h3 class="text-center"></h3>
   <p class="text-center"><em></em></p>

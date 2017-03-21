@@ -55,6 +55,8 @@
 	<security:authorize access="hasRole('ROLE_ADMIN')">
 	 <c:url var="addproduct" value="/admin/productdetails"></c:url>
     <li><a href="${addproduct }">Add New Product</a></li>   
+    <c:url var="contactlist" value="/admin/contactlist"></c:url>
+    <li><a href="${contactlist }">Contact List</a></li>
      </security:authorize>
 
     

@@ -34,9 +34,10 @@ panel{
 <body>
   <div class="container">
   <form action="<c:url value='/j_spring_security_check'></c:url>"  method="post" class="form-horizontal">
-  <div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10>
-  <center><B>LOGIN</B> </center></div>
+
+<div class="panel panel-default" class="sansserif">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>LOGIN</B></center></div>
        <div class="panel-body">
      <p1>${error}
 		${logout}

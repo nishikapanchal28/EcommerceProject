@@ -62,7 +62,7 @@ public void addCartItem(@PathVariable(value="id") int productId){
 	cartItem.setCart(cart);//set cart id
 	cartitemservice.addCartItem(cartItem); //insert query	
 }
-	@RequestMapping("/removeCartItem/{cartItemId}")
+/*	@RequestMapping("/removeCartItem/{cartItemId}")
 	@ResponseStatus(value=HttpStatus.NO_CONTENT)
 	public void removeCartItem(@PathVariable int cartItemId){
 		CartItem cartItem=cartitemservice.getCartItem(cartItemId);
@@ -74,6 +74,6 @@ public void addCartItem(@PathVariable(value="id") int productId){
 		Cart cart=cartservice.getCart(cartId);
 		cartitemservice.removeAllCartItems(cart);
 	}
-
+*/
 
 }

@@ -16,9 +16,31 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
 </style>
 </head>
 <body>
-<div class="container text-center">
-<b>here you can read about us!!!!! thanks!!!!!</b>
+<div class="container text-left">
+<div class="panel panel-default" class="sansserif">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>INTRODUCTION TO OUR PROJECT</B></center></div>
+       <div class="panel-body">
+<div class="container">
+This is an E-commerce project 
+in which a there are two types of roles are present, their roles are described below.
+<li><B>User </B>---who can use this project for online shopping. 
+<ul>They can buy products using this application. </ul>
+<ul>They can register if new user or they can directly login by using their user name and password.</ul>
+<ul>They can be able to contact with the admin by using contact option and send their query or comments.</ul>
+<ul>They can be able to view all the products and search product by category of the product.</ul>
+ </li>
+ <li><B>Admin </B>--who is controlling the application. He can login by his login credentials.
+ <ul>He can add a new product.</ul>
+ <ul>He can view a product and also search a product by category of the product.</ul>
+ <ul>He can delete a product.</ul>
+ <ul>He can view all the queries and comments by using contact list option.</ul>
+ </li>
 </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

@@ -1,5 +1,7 @@
 package com.spring.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.model.Contact;
+
 import com.spring.service.ContactService;;
 
 @Controller
@@ -32,6 +35,12 @@ public String Addcontact(@ModelAttribute("contact") Contact contact,HttpServletR
 	contactservice.saveContact(contact);
 	return "home";
 }
-
+@RequestMapping(value="/admin/contactlist" , method = RequestMethod.GET)
+public String getAllContacts(Model model){
+	List<Contact> contacts=contactservice.listAllContact();
+	model.addAttribute("contactList",contacts);
+	
+	return "contactlist";
+}
 
 }
