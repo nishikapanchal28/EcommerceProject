@@ -17,22 +17,24 @@ import com.spring.service.CustomerService;
 @Controller
 public class CartController {
 	@Autowired
-private CustomerService customerservice;
+	private CustomerService customerservice;
 	@Autowired
-private CartService cartservice;
+	private CartService cartservice;
+
 	@RequestMapping("/getCartId")
-public String getCartId(Model model){
-	User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	String username=user.getUsername();
-	Customer customer=customerservice.getCustomerByUsername(username);
-	Cart cart=customer.getCart();
-	int cartId=cart.getId();
-	model.addAttribute("cartId",cartId);
-	return "cart";
-}
+	public String getCartId(Model model) {
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String username = user.getUsername();
+		Customer customer = customerservice.getCustomerByUsername(username);
+		Cart cart = customer.getCart();
+		int cartId = cart.getId();
+		model.addAttribute("cartId", cartId);
+		return "cart";
+	}
+
 	@RequestMapping("/getCart/{cartId}")
-	public @ResponseBody Cart getCart(@PathVariable int cartId){
-	Cart cart=cartservice.getCart(cartId);
-	return cart;
-	} 
+	public @ResponseBody Cart getCart(@PathVariable int cartId) {
+		Cart cart = cartservice.getCart(cartId);
+		return cart;
+	}
 }

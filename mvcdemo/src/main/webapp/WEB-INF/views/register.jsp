@@ -176,7 +176,7 @@ div.panel{
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
 <input type="submit" value="SUBMIT" class="btn btn-info">
-<input type="submit" value="CANCEL" class="btn btn-info">
+<input type="reset" value="RESET" class="btn btn-info">
 </div>
 </div>
     </form:form>

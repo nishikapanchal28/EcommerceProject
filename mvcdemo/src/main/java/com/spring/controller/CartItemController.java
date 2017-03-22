@@ -30,50 +30,62 @@ public class CartItemController {
 	private CustomerService customerservice;
 	@Autowired
 	private CartService cartservice;
-	@ResponseStatus(value=HttpStatus.NO_CONTENT)
-	
-@RequestMapping("/addCartItem/{p.id}")
-public void addCartItem(@PathVariable(value="id") int productId){
-	User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	
-	String username=user.getUsername();
-	Customer customer=customerservice.getCustomerByUsername(username);//from Users where username=?
-	Cart cart=customer.getCart();
-	List<CartItem> cartItems= cart.getCartItem();
-	
-	Product  product = productservice.getById(productId);
-	
-	for (int i = 0; i <cartItems.size(); i++) {
-		CartItem cartItem=cartItems.get(i);
-		Product p=cartItem.getProduct();
-		     //1    ==  1
-		if(p.getId()==productId){
-			cartItem.setQuantity(cartItem.getQuantity() + 1);//increment the quantity
-			cartItem.setTotalPrice(cartItem.getQuantity() * p.getPrice()); //update the total price
-			cartitemservice.addCartItem(cartItem);//update the quantity in the cartitem
-			return;
-		}	
+
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+
+	@RequestMapping("/addCartItem/{p.id}")
+	public void addCartItem(@PathVariable(value = "id") int productId) {
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		String username = user.getUsername();
+		Customer customer = customerservice.getCustomerByUsername(username);// from
+																			// Users
+																			// where
+																			// username=?
+		Cart cart = customer.getCart();
+		List<CartItem> cartItems = cart.getCartItem();
+
+		Product product = productservice.getById(productId);
+
+		for (int i = 0; i < cartItems.size(); i++) {
+			CartItem cartItem = cartItems.get(i);
+			Product p = cartItem.getProduct();
+			// 1 == 1
+			if (p.getId() == productId) {
+				cartItem.setQuantity(cartItem.getQuantity() + 1);// increment
+																	// the
+																	// quantity
+				cartItem.setTotalPrice(cartItem.getQuantity() * p.getPrice()); // update
+																				// the
+																				// total
+																				// price
+				cartitemservice.addCartItem(cartItem);// update the quantity in
+														// the cartitem
+				return;
+			}
+		}
+
+		CartItem cartItem = new CartItem();
+		cartItem.setQuantity(1);
+		cartItem.setTotalPrice(cartItem.getQuantity() * product.getPrice());
+		cartItem.setProduct(product); // set product id
+		cartItem.setCart(cart);// set cart id
+		cartitemservice.addCartItem(cartItem); // insert query
 	}
 	
-	CartItem cartItem=new CartItem();
-	cartItem.setQuantity(1);
-	cartItem.setTotalPrice(cartItem.getQuantity() * product.getPrice());
-	cartItem.setProduct(product); //set product id
-	cartItem.setCart(cart);//set cart id
-	cartitemservice.addCartItem(cartItem); //insert query	
-}
-/*	@RequestMapping("/removeCartItem/{cartItemId}")
-	@ResponseStatus(value=HttpStatus.NO_CONTENT)
-	public void removeCartItem(@PathVariable int cartItemId){
-		CartItem cartItem=cartitemservice.getCartItem(cartItemId);
-		cartitemservice.removeCartItem(cartItem);
-	}
-	@RequestMapping("/removeAllCartItems/{cartId}")
-	@ResponseStatus(value=HttpStatus.NO_CONTENT)
-	public void removeAllCartItems(@PathVariable int cartId){
-		Cart cart=cartservice.getCart(cartId);
-		cartitemservice.removeAllCartItems(cart);
-	}
-*/
+	  @RequestMapping("/removeCartItem/{cartItemId}")
+	  
+	@ResponseStatus(value=HttpStatus.NO_CONTENT) public void
+	 removeCartItem(@PathVariable int cartItemId){ CartItem
+	  cartItem=cartitemservice.getCartItem(cartItemId);
+	  cartitemservice.removeCartItem(cartItem); }
+	 
+	 @RequestMapping("/removeAllCartItems/{cartId}")
+	 
+	 @ResponseStatus(value=HttpStatus.NO_CONTENT) public void
+	  removeAllCartItems(@PathVariable int cartId){ Cart
+	 cart=cartservice.getCart(cartId);
+	 cartitemservice.removeAllCartItems(cart); }
+	 
 
 }

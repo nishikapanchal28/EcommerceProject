@@ -13,6 +13,13 @@ background-image: url("resources/images/winter%20style%20sophie%20hulme%20bag.jp
    
   background-size:cover;
 }
+div.panel{
+ 
+      background: rgba(130,130,130,.3);
+}
+p{
+color:white;
+}
 </style>
 </head>
 <body>

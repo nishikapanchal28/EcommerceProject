@@ -13,6 +13,10 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
    
   background-size:cover;
 }
+div.panel{
+ 		color:white;
+      background: rgba(130,130,130,.3);
+}
 </style>
 </head>
 <body>

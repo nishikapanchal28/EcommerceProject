@@ -12,13 +12,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    
-<script  type="text/javascript">
+   <style>
+body{
+    background-image: url("resources\images\winter%20style%20sophie%20hulme%20bag.jpg");
+    background-repeat: no-repeat;
+  background-size:cover;
+}
+div.panel{
+ 
+      background: rgba(130,130,130,.3);
+}
+</style>
+<!-- <script  type="text/javascript">
 $(function(){
 $('input[type=date]').datepicker({
 	format:'YYYY-MM-DD'
 });	
 });
 </script>
+ -->
 </head>
 <body>
 <div class="container">
@@ -26,7 +38,7 @@ $('input[type=date]').datepicker({
 <form:form action="addproduct" class="form-horizontal" method="post" commandName="product" enctype="multipart/form-data">
 <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
-  <center><B>PRODUCT DETAILS</B></center> </div>
+  <center><B>	ADD A PRODUCT</B></center> </div>
        <div class="panel-body">
 <div class="form-group">
 <label for="id"></label>
@@ -78,7 +90,7 @@ $('input[type=date]').datepicker({
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
 <input type="submit" value="ADD PRODUCT" class="btn btn-info">
-<input type="submit" value="CANCEL" class="btn btn-info">
+<input type="reset" value="RESET" class="btn btn-info">
 </div>
 </div>
 </div>

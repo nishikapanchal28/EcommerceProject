@@ -7,33 +7,46 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<style>
+img{
+  border-radius: 50%;
+}
+</style>
 </head>
 <body ng-app="app"  ng-controller="ProductController">
-	 <div class="container">
-<div class="panel panel-default">
-     <div class="panel-heading" style= min-height:10 style="background-color:DeepSkyBlue">
-  <center><B>PRODUCT SPECIFICATIONS </B> </center></div>
+<div class="container">
+	 <div class="panel panel-default" class="sansserif">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>PRODUCT SPECIFICATIONS</B></center></div>
        <div class="panel-body">
 		<table class="table">
 			<tr>
-				<td>PRODUCT NAME:</td>
+				<td>PRODUCT NAME</td>
 				<td>${product.productname }</td>
 			</tr>
+			<tr>
+			<td>
+			PRODUCT IMAGE
+			</td>
+			<td>
+			<c:url var="src" value="D:/images/${p.id}.png"></c:url>
+			<img src="${pageContext.request.contextPath}/resources/images/${p.id}.png" height="60" width="60"/>
+			</td>
 			
 			<tr>
-				<td>PRODUCT PRICE:</td>
+				<td>PRODUCT PRICE</td>
 				<td>${product.price }</td>
 			</tr>
 			<tr>
-				<td>CATEGORY DETAILS:</td>
+				<td>CATEGORY DETAILS</td>
 				<td>${product.category.categoryDetails }</td>
 			</tr>
 			<tr>
-				<td>MANUFACTURING DATE:</td>
+				<td>MANUFACTURING DATE</td>
 				<td>${product.mfg }</td>
 			</tr>
 			<tr>
-			<td>ADD TO CART:</td>
+			<td>ADD TO CART</td>
 			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
 			</tr>
 		</table>

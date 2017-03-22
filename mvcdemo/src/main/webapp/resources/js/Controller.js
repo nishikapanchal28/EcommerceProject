@@ -1,12 +1,12 @@
 var app= angular.module("app",[])
 app.controlloer("ProductController",function($script, $http){
 	$scope.addToCart=function(productId){
-		$http.put('http://localhost:8080/mvcdemo/addCartItem/'+ productId).sucess(function(){
+		$http.put('http://localhost:9090/mvcdemo/addCartItem/'+ productId).sucess(function(){
 			alert("product successfully added to cart")
 		})
 	}
 })
-/*
+
 $scope.getCart=function(CartId){
 	$scope.cartId=cartId;
 	console.log("cart id is "+ CartId)
@@ -35,4 +35,4 @@ for(var i=0;i<$scope.cart.cartItems.length;i++){
 grandTotal=grandTotal+$scope.cart.cartItems[i].totalPrice;
 }
 return grandTotal;
-}*/
+}

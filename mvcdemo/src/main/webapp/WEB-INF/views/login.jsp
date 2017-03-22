@@ -18,8 +18,13 @@ body  {
    
   background-size:cover;
 }
+div.panel{
+ 
+      background: rgba(130,130,130,.3);
+}
 p1{
 font-style: italic;
+font-weight: bold;
 color: red;
 text-align: center;
 }
@@ -66,7 +71,7 @@ panel{
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
        <input type="submit" value="SUBMIT" align="right"class="btn">
-       <input  type="submit" value="CANCEL" class="btn">
+       <input  type="reset" value="RESET" class="btn">
       </div>
       </div>
       </div>

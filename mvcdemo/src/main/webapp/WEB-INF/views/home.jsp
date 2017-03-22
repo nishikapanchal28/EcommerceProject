@@ -15,7 +15,17 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
    
   background-size:cover;
 }
+
+  
+   .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+    
+    max-height: 400px;
+    
+    } 
 </style>
+
   </head>
 <body><center>
 <div class="container text-center"></div>
@@ -36,7 +46,7 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/" alt="" width="80%" height="400px" margin="auto">
+        <img src="resources/images/winter%20style%20sophie%20hulme%20bag.jpg" alt="" width="600" height="200" margin="auto">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -44,7 +54,7 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
       </div>
 
       <div class="item">
-        <img src="resources/images/" alt="" width="600" height="200">
+        <img src="resources/images/HARRY.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -52,14 +62,38 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
       </div>
    
       <div class="item">
-        <img src="resources/images/" alt="" width="600" height="200">
+        <img src="resources/images/Mackenzie-Leather-Bags-Goods-Product-Photography-13.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
         </div>
       </div>
      
-  
+  <div class="item">
+        <img src="resources/images/lots_of_hermes_bags-237545.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <img src="resources/images/black_leather_doctor_gladstone_bag_08a489af.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+     
+       <div class="item">
+        <img src="resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_1024x1024.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
     </div>
 
     <!-- Left and right controls -->

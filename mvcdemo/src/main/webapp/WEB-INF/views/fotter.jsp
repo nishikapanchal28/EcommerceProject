@@ -6,13 +6,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<style>
+b{
+color:white;
+}
+</style>
 
   </head>
  <body>
  <div class="container">
 <nav class="navbar navbar-inverse">
-  <p>made by nishikapanchal</a></p> 
+  <center><b>made by nishikapanchal</b></center>
 </nav>
 </div>
 </body>
