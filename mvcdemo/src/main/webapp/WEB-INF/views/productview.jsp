@@ -11,6 +11,17 @@
 img{
   border-radius: 50%;
 }
+body{
+background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Photography-13.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+div.panel{
+ 
+      background: rgba(130,130,130,.5);
+}
+tr,td{color:white;}
 </style>
 </head>
 <body ng-app="app"  ng-controller="ProductController">
@@ -47,7 +58,7 @@ img{
 			</tr>
 			<tr>
 			<td>ADD TO CART</td>
-			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"  style="font-size:20px"></span></a></td>
 			</tr>
 		</table>
 	</div>

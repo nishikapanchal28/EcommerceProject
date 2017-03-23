@@ -21,7 +21,7 @@
 <title>All products</title>
 <script>
 $(window).load(function() {
-searchTable($('#search').val());
+searchTable($('#myInput').val());
 });
 
 $(document).ready(function() {
@@ -62,7 +62,7 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
   background-size:cover;
 }
 #myInput {
-  background-image: url('/css/searchicon.png');
+ 
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
@@ -70,6 +70,10 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
+}
+div.panel{
+ 
+      background: rgba(130,130,130,.9);
 }
 
 #myTable {
@@ -82,6 +86,7 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
 #myTable th, #myTable td {
   text-align: left;
   padding: 5px;
+ 
 }
 img{
   border-radius: 50%;
@@ -89,6 +94,7 @@ img{
 }
 #myTable tr {
   border-bottom: 1px solid #ddd;
+  
 }
 
 #myTable tr.header, #myTable tr:hover {
@@ -97,9 +103,7 @@ img{
 </style>
 </head>
 <body>
-
-
- <div class="container text-left">
+ <div class="container">
 <div class="panel panel-default" class="sansserif">
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>LIST OF ALL PRODUCTS</B></center></div>
@@ -115,7 +119,7 @@ img{
 <security:authorize access="hasRole('ROLE_ADMIN')">
 <th>EDIT</th>
 <th>DELETE</th>
-</security:authorize></tr></thead>
+</security:authorize></tr>
 <c:forEach var="p" items="${productList}">
 <tbody>
 <tr class="info"><td>

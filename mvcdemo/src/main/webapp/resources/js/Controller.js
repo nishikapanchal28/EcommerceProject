@@ -10,7 +10,7 @@ app.controlloer("ProductController",function($script, $http){
 $scope.getCart=function(CartId){
 	$scope.cartId=cartId;
 	console.log("cart id is "+ CartId)
-	$http.get('http://localhost:8080/mvcdemo/getCartItem/'+ CartId).sucess(function(){
+	$http.get('http://localhost:9090/mvcdemo/getCartItem/'+ CartId).sucess(function(){
 		$scope.cart=data
 	})
 }
@@ -18,13 +18,13 @@ $scope.getCart=function(CartId){
 
 $scope.removeFromCart=function(cartItemId){
 console.log('cartitem to be removed is ' + cartItemId);
-$http.put('http://localhost:8080/mvcdemo/removeCartItem/'+cartItemId).success(function(){
+$http.put('http://localhost:9090/mvcdemo/removeCartItem/'+cartItemId).success(function(){
 $scope.getCart($scope.cartId)
 })
 }
 
 $scope.clearCart=function(){
-$http.put('http://localhost:8080/mvcdemo/removeAllCartItems/'+$scope.cartId).success(function(){
+$http.put('http://localhost:9090/mvcdemo/removeAllCartItems/'+$scope.cartId).success(function(){
 $scope.getCart($scope.cartId)
 })
 }

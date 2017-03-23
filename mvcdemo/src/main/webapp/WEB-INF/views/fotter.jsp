@@ -16,7 +16,7 @@ color:white;
  <body>
  <div class="container">
 <nav class="navbar navbar-inverse">
-  <center><b>made by nishikapanchal</b></center>
+  <center><b>made by NISHIKA PANCHAL</b></center>
 </nav>
 </div>
 </body>

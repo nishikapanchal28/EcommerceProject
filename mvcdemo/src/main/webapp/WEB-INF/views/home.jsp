@@ -15,17 +15,16 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
    
   background-size:cover;
 }
-
-  
    .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
-    
-    max-height: 400px;
-    
+     max-height: 400px;
     } 
+    div.panel{
+ 
+      background: rgba(130,130,130,.3);
+}
 </style>
-
   </head>
 <body><center>
 <div class="container text-center"></div>
@@ -85,7 +84,40 @@ background-image: url("resources/images/lots_of_hermes_bags-237545.jpg");
         </div>
       </div>
       
-     
+      <div class="item">
+        <img src="resources/images/20140117_141917.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+       <div class="item">
+        <img src="resources/images/8c10c6d4ce345cc5e5ca52ba08ab5e98.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+       <div class="item">
+        <img src="resources/images/bag-three.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+       <div class="item">
+        <img src="resources/images/rBVaHFX-Y8yAPDPvAACywGrHXYo659.jpg" alt="" width="600" height="200">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      
+      
+      
        <div class="item">
         <img src="resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_1024x1024.jpg" alt="" width="600" height="200">
         <div class="carousel-caption">

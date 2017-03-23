@@ -48,10 +48,11 @@ color:white;
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comment" placeholder="Comment" rows="5"></textarea>
+      <textarea class="form-control" id="comments" name="comment" placeholder="Comment" rows="10"></textarea>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
+          <button class="btn pull-left" type="submit">Send</button>
+           <input  type="reset" value="RESET" class="btn">
         </div>
       </div> 
      </form>

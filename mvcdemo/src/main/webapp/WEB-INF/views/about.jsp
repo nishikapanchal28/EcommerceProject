@@ -15,7 +15,7 @@ background-image: url("resources/images/61_521a68b1-4df1-4a0e-afb9-6c15598f7193_
 }
 div.panel{
  		color:white;
-      background: rgba(130,130,130,.3);
+      background: rgba(100,100,100,.5);
 }
 </style>
 </head>
