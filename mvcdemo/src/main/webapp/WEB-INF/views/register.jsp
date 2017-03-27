@@ -96,37 +96,37 @@ div.panel{
 <div class="form-group">
       <label class="control-label col-sm-2" for="apartmentnumber">APARTMENT NUMBER:  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.apartmentnumber"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.apartmentnumber"  placeholder="Enter apartment number"/>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="streetname">STREET NAME:  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.streetname"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.streetname"  placeholder="Enter street name"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="city"> CITY: </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.city"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.city"  placeholder="Enter city"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="state"> STATE:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.state"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.state"  placeholder="Enter state"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="country"> COUNTRY:  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.country"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.country"  placeholder="Enter country"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="zipcode"> ZIP CODE:   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="billingaddress.zipcode"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="billingaddress.zipcode"  placeholder="Enter zipcode"/>
       </div>
       </div>
     </div>
@@ -138,37 +138,37 @@ div.panel{
     <div class="form-group">
       <label class="control-label col-sm-2" for="apartmentnumber">APARTMENT NUMBER:   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.apartmentnumber"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.apartmentnumber"  placeholder="Enter apartment number"/>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="streetname">STREET NAME:   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.streetname"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.streetname"  placeholder="Enter street name"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="city"> CITY : </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.city"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.city"  placeholder="Enter city"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="state"> STATE:  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.state"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.state"  placeholder="Enter state"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="country"> COUNTRY:  </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.country"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.country"  placeholder="Enter country"/>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="zipcode"> ZIP CODE:   </label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="shippingaddress.zipcode"  placeholder="Enter quantity"/>
+        <form:input class="form-control" path="shippingaddress.zipcode"  placeholder="Enter zipcode"/>
       </div>
       </div>
     </div></div>

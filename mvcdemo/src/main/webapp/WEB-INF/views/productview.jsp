@@ -56,10 +56,12 @@ tr,td{color:white;}
 				<td>MANUFACTURING DATE</td>
 				<td>${product.mfg }</td>
 			</tr>
+			<security:authorize access="hasRole('ROLE_USER')">
 			<tr>
 			<td>ADD TO CART</td>
 			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"  style="font-size:20px"></span></a></td>
 			</tr>
+			</security:authorize>
 		</table>
 	</div>
 	</div>

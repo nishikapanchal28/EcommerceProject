@@ -1,5 +1,5 @@
-var app= angular.module("app",[])
-app.controlloer("ProductController",function($script, $http){
+var app= angular.module('app',[]);
+app.controlloer('ProductController',function($script, $http){
 	$scope.addToCart=function(productId){
 		$http.put('http://localhost:9090/mvcdemo/addCartItem/'+ productId).sucess(function(){
 			alert("product successfully added to cart")
@@ -7,16 +7,16 @@ app.controlloer("ProductController",function($script, $http){
 	}
 })
 
-$scope.getCart=function(CartId){
+/*$scope.getCart=function(CartId){
 	$scope.cartId=cartId;
 	console.log("cart id is "+ CartId)
 	$http.get('http://localhost:9090/mvcdemo/getCartItem/'+ CartId).sucess(function(){
 		$scope.cart=data
 	})
 }
+*/
 
-
-$scope.removeFromCart=function(cartItemId){
+/*$scope.removeFromCart=function(cartItemId){
 console.log('cartitem to be removed is ' + cartItemId);
 $http.put('http://localhost:9090/mvcdemo/removeCartItem/'+cartItemId).success(function(){
 $scope.getCart($scope.cartId)
@@ -36,3 +36,4 @@ grandTotal=grandTotal+$scope.cart.cartItems[i].totalPrice;
 }
 return grandTotal;
 }
+*/

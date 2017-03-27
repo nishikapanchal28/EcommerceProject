@@ -47,7 +47,7 @@
       <c:if test="${pageContext.request.userPrincipal.name!=null}">
       
 <security:authorize access="hasRole('ROLE_USER')">
- <c:url var="cart" value="/getCart"></c:url> 
+ <c:url var="cart" value="/cart"></c:url> 
 <li><a href="${cart }">cart</a>
  </security:authorize>
 

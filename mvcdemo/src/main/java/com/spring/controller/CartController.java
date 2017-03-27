@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring.model.Cart;
+import com.spring.model.Contact;
 import com.spring.model.Customer;
 import com.spring.service.CartService;
 import com.spring.service.CustomerService;
@@ -21,7 +22,7 @@ public class CartController {
 	@Autowired
 	private CartService cartservice;
 
-	@RequestMapping("/getCartId")
+	/*@RequestMapping("/getCartId")
 	public String getCartId(Model model) {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username = user.getUsername();
@@ -30,11 +31,15 @@ public class CartController {
 		int cartId = cart.getId();
 		model.addAttribute("cartId", cartId);
 		return "cart";
-	}
-
-	@RequestMapping("/getCart/{cartId}")
-	public @ResponseBody Cart getCart(@PathVariable int cartId) {
+	}*/
+/*
+	@RequestMapping("/getCart")
+	public Cart getCart(@PathVariable int cartId) {
 		Cart cart = cartservice.getCart(cartId);
 		return cart;
+	}*/
+	@RequestMapping("/cart")
+	public String cart(){
+		return "cart";
 	}
 }

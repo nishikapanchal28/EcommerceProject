@@ -6,33 +6,91 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<%-- <script src="<c:url value="/resources/js/Controller.js"></c:url>"></script> --%>
+<style>
+body{
+background-image: url("resources/images/15377511-shopping-cart-in-the-parking-lot-of-a-supermarket-Stock-Photo.jpg");
+   background-repeat: no-repeat;
+   
+  background-size:cover;
+}
+   div.panel{
+ 
+      background: rgba(130,130,130,.9);
+}
+#myInput {
+ 
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+div.panel{
+ 
+      background: rgba(130,130,130,.9);
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 5px;
+ 
+}
+img{
+  border-radius: 50%;
+  
+}
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+  
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
 </head>
-<body ng-app="app" ng-controller="ProductController">
+<body> <div ng-app="app" ng-controller="ProductController">
 <div ng-init="getCart(${cartId })">
-<table class="table table-striped">
-<thead>
-<tr><th>Name</th><th>Quantity</th><th>Total Price</th>
+<div class="container">
+	 <div class="panel panel-default" class="sansserif">
+     <div class="panel-heading" style="background-color:DeepSkyBlue;">
+  <center><B>YOUR CART</B></center></div>
+       <div class="panel-body">
+<ng-repeat="cartItem in cart.cartItem">
+<a href="" class="btn btn-danger" pull-left ng-click="clearCart()">
+<span class="glyphicon glyphicon-remove">Clear Cart</span></a>
+<a href="" class="btn btn-success" pull-right>
+<span class="glyphicon glyphicon-shopping-cart">Checkout</span></a>
+<table id="myTable">
+<tr><th>Name</th>
+<th>Quantity</th>
+<th>Total Price</th>
+<th>Remove Product</th>
 </tr>
-</thead>
-
-<tr ng-repeat="cartItem in cart.cartItem">
-
-<td><a href="" class="btn btn-danger" pull-left ng-click="clearCart()"></a>
-<span class="glyphicon glyphicon-remove"></span></td>
-
-<td><a href="" class="btn btn-success" pull-right></a>
-<span class="glyphicon glyphicon-shopping-cart">checkout</span></td>
-
+<tr>
 <td>{{cartItem.product.productname}}</td>
 <td>{{cartItem.quantity}}</td>
 <td>{{cartItem.totalPrice}}</td>
-<td><a href="" class="label label-danger" pull-left ng-click="removeFromCart(CartItem_Id)"></a>
-<span class="glyphicon glyphicon-remove"></span></td>
+<td><a href="" class="label label-danger" pull-left ng-click="removeFromCart(CartItem_Id)">
+<span class="glyphicon glyphicon-remove">Remove</span></a></td>
 </tr>
-
 </table>
-Total Price : {{calculateGrandTotal()}}
+<tr><td>Total Price : {{calculateGrandTotal()}}</td></tr>
 </div>
-<script src="<c:url value="/resources/js/Controller.js"></c:url>"></script>
+</div> 
+</div>
+</div>
+</div>
 </body>
 </html>
+<%@ include file="fotter.jsp" %>
