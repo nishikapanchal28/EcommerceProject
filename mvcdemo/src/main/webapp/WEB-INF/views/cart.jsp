@@ -6,7 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<%-- <script src="<c:url value="/resources/js/Controller.js"></c:url>"></script> --%>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+<script src="<c:url value="resources/js/controller.js"></c:url>"></script>
+
+
 <style>
 body{
 background-image: url("resources/images/15377511-shopping-cart-in-the-parking-lot-of-a-supermarket-Stock-Photo.jpg");
@@ -59,7 +64,8 @@ img{
 }
 </style>
 </head>
-<body> <div ng-app="app" ng-controller="ProductController">
+<body ng-app="app" ng-controller="ProductController">
+ <div >
 <div ng-init="getCart(${cartId })">
 <div class="container">
 	 <div class="panel panel-default" class="sansserif">
@@ -67,10 +73,10 @@ img{
   <center><B>YOUR CART</B></center></div>
        <div class="panel-body">
 <ng-repeat="cartItem in cart.cartItem">
-<a href="" class="btn btn-danger" pull-left ng-click="clearCart()">
-<span class="glyphicon glyphicon-remove">Clear Cart</span></a>
-<a href="" class="btn btn-success" pull-right>
-<span class="glyphicon glyphicon-shopping-cart">Checkout</span></a>
+<a href="" class="pull-left"   ng-click="clearCart()">
+<span class="btn btn-danger">Clear Cart</span></a>
+<a href="" class="pull-right" >
+<span class="btn btn-success" >Checkout</span></a>
 <table id="myTable">
 <tr><th>Name</th>
 <th>Quantity</th>
@@ -81,8 +87,8 @@ img{
 <td>{{cartItem.product.productname}}</td>
 <td>{{cartItem.quantity}}</td>
 <td>{{cartItem.totalPrice}}</td>
-<td><a href="" class="label label-danger" pull-left ng-click="removeFromCart(CartItem_Id)">
-<span class="glyphicon glyphicon-remove">Remove</span></a></td>
+<td><a href="" class="pull-left"  ng-click="removeFromCart(CartItem_Id)">
+<span class="label label-danger" class="glyphicon glyphicon-remove">Remove</span></a></td>
 </tr>
 </table>
 <tr><td>Total Price : {{calculateGrandTotal()}}</td></tr>

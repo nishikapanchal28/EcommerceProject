@@ -38,10 +38,7 @@ public class CartItemController {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
 		String username = user.getUsername();
-		Customer customer = customerservice.getCustomerByUsername(username);// from
-																			// Users
-																			// where
-																			// username=?
+		Customer customer = customerservice.getCustomerByUsername(username);// from Users where username=?
 		Cart cart = customer.getCart();
 		List<CartItem> cartItems = cart.getCartItem();
 
@@ -52,15 +49,9 @@ public class CartItemController {
 			Product p = cartItem.getProduct();
 			// 1 == 1
 			if (p.getId() == productId) {
-				cartItem.setQuantity(cartItem.getQuantity() + 1);// increment
-																	// the
-																	// quantity
-				cartItem.setTotalPrice(cartItem.getQuantity() * p.getPrice()); // update
-																				// the
-																				// total
-																				// price
-				cartitemservice.addCartItem(cartItem);// update the quantity in
-														// the cartitem
+				cartItem.setQuantity(cartItem.getQuantity() + 1);// increment the quantity
+				cartItem.setTotalPrice(cartItem.getQuantity() * p.getPrice()); // update the total price
+				cartitemservice.addCartItem(cartItem);// update the quantity in the cartitem
 				return;
 			}
 		}
@@ -73,8 +64,7 @@ public class CartItemController {
 		cartitemservice.addCartItem(cartItem); // insert query
 	}
 	
-	  @RequestMapping("/removeCartItem/{cartItemId}")
-	  
+/*	  @RequestMapping("/removeCartItem/{cartItemId}")	  
 	@ResponseStatus(value=HttpStatus.NO_CONTENT) public void
 	 removeCartItem(@PathVariable int cartItemId){ CartItem
 	  cartItem=cartitemservice.getCartItem(cartItemId);
@@ -86,6 +76,6 @@ public class CartItemController {
 	  removeAllCartItems(@PathVariable int cartId){ Cart
 	 cart=cartservice.getCart(cartId);
 	 cartitemservice.removeAllCartItems(cart); }
-	 
+	 */
 
 }

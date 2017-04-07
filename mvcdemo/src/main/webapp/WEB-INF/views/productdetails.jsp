@@ -84,7 +84,7 @@ $('input[type=date]').datepicker({
 </div>
   <div class="form-group">
       <label class="control-label col-sm-2" for="image">IMAGE:</label>
-      <input  name="images" type="file"/>
+      <input  class="form-control" name="images" type="file"/>
     </div>
     
 <div class="form-group">

@@ -6,7 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+	<script src="<c:url value="resources/js/controller.js"></c:url>"></script>
+
 <style>
 img{
   border-radius: 50%;
@@ -66,7 +69,6 @@ tr,td{color:white;}
 	</div>
 	</div>
 	</div>
-	<script src="<c:url value="/resources/js/Controller.js"></c:url>"></script>
 </body>
 </html>
 <%@ include file="fotter.jsp" %>

@@ -32,13 +32,13 @@ public class CartController {
 		model.addAttribute("cartId", cartId);
 		return "cart";
 	}*/
-/*
-	@RequestMapping("/getCart")
+
+	/*@RequestMapping("/getCart")
 	public Cart getCart(@PathVariable int cartId) {
 		Cart cart = cartservice.getCart(cartId);
 		return cart;
 	}*/
-	@RequestMapping("/cart")
+@RequestMapping("/cart")
 	public String cart(){
 		return "cart";
 	}
