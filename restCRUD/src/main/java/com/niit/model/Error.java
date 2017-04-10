@@ -1,5 +1,8 @@
 package com.niit.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Error {
 	private int code;
 	private String message;
