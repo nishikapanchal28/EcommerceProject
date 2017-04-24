@@ -1,12 +1,13 @@
-app.controller('editController',function($scope,PersonService){
-	  $scope.editPerson=function getPersonById(id){
-		  PersonService.getPersonById(id)
+app.controller('editController',function($scope,PersonService,$routParams){
+	var id=$routeParams.id;
+	  $scope.person=PersonService.getPersonById(id)	
 	  .then(function(response){
-		  console.log(response.status)
-		  console.log(response.data)
 		  $scope.persons=response.data;
+
+		  console.log(response.data)
+	
 	  },function(response){
-		  console.log(response.status);  
+		  console.log(response.status)
 	  }) 
-	}
+	
 })

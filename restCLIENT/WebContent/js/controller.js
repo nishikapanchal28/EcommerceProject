@@ -1,4 +1,4 @@
-app.controller('PersonController',function($scope,PersonService){
+app.controller('PersonController',function($scope, $location, PersonService){
 	function getAllPersons(){
 	  $scope.persons=PersonService.getAllPersons()
 	  .then(function(response){
@@ -7,7 +7,7 @@ app.controller('PersonController',function($scope,PersonService){
 		  $scope.persons=response.data;
 	  },function(response){
 		  console.log(response.status)
-		    console.log(response.data);
+
 	  })
 	  
 	}
@@ -19,7 +19,7 @@ app.controller('PersonController',function($scope,PersonService){
 	$scope.result="successfully inserted";
 	  },function(response){
 		  console.log(response.status)
-		  console.log(response.data);
+		  console.log(response.data)
 	  }
 	  )
 }
@@ -27,10 +27,10 @@ app.controller('PersonController',function($scope,PersonService){
 		PersonService.deletePerson(id)
 	  .then(function(response){
 		  console.log(response.status)
-		  console.log(response.data)
+			getAllPersons();
 	  },function(response){
 		  console.log(response.status)
-		  console.log(response.data);
+		
 	  }
 	  )
 }

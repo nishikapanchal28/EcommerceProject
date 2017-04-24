@@ -18,7 +18,7 @@ public class BillingAddress implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
 	@NotEmpty(message="enter apartment number")
-	private String apartmentnumber;
+	private int apartmentnumber;
 	@NotEmpty(message="enter street name ")
 	private String streetname;
 	@NotEmpty(message="enter city")
@@ -36,10 +36,10 @@ public class BillingAddress implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getApartmentnumber() {
+	public int getApartmentnumber() {
 		return apartmentnumber;
 	}
-	public void setApartmentnumber(String apartmentnumber) {
+	public void setApartmentnumber(int apartmentnumber) {
 		this.apartmentnumber = apartmentnumber;
 	}
 	public String getStreetname() {

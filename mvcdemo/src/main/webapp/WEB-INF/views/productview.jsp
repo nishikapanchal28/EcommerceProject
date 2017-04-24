@@ -43,8 +43,8 @@ tr,td{color:white;}
 			PRODUCT IMAGE
 			</td>
 			<td>
-			<c:url var="src" value="D:/images/${p.id}.png"></c:url>
-			<img src="${pageContext.request.contextPath}/resources/images/${p.id}.png" height="60" width="60"/>
+			<c:url var="src" value="D:/images/${product.id}.png"></c:url>
+			<img src="${pageContext.request.contextPath}/resources/images/${product.id}.png" height="60" width="60"/>
 			</td>
 			
 			<tr>

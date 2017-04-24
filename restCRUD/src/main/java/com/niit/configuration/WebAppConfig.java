@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackages="com.****")
+@ComponentScan(basePackages="com.niit")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public InternalResourceViewResolver getViewResolver(){
@@ -21,6 +21,6 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry){
 		registry.addResourceHandler("/resources/**")
-		.addResourceLocations("/WEB-INF/resources/");
+		.addResourceLocations("/resources/");
 	}
 }

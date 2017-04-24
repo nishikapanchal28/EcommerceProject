@@ -93,9 +93,11 @@
       </c:if>
       
      <li> <a>welcome ${pageContext.request.userPrincipal.name}</a></li>
-     
+   
       <c:if test="${pageContext.request.userPrincipal.name!=null}">
            <li><a href="j_spring_security_logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+           <%--  <li> <c:url var="src" value="D:/images/${person.id}.png"></c:url>
+			<img src="${pageContext.request.contextPath}/resources/images/${person.id}.png" height="60" width="60"/></li> --%>
       </c:if>
       
     </ul>

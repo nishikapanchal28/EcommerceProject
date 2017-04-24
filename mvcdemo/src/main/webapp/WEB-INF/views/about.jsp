@@ -26,8 +26,8 @@ div.panel{
   <center><B>INTRODUCTION TO OUR PROJECT</B></center></div>
        <div class="panel-body">
 <div class="container">
-This is an E-commerce project 
-in which a there are two types of roles are present, their roles are described below.
+This is an E-commerce shopping portal.
+in which a there are two types of roles are there, roles are described below.
 <li><B>User </B>---who can use this project for online shopping. 
 <ul>They can buy products using this application. </ul>
 <ul>They can register if new user or they can directly login by using their user name and password.</ul>
@@ -35,10 +35,10 @@ in which a there are two types of roles are present, their roles are described b
 <ul>They can be able to view all the products and search product by category of the product.</ul>
  </li>
  <li><B>Admin </B>--who is controlling the application. He can login by his login credentials.
- <ul>He can add a new product.</ul>
- <ul>He can view a product and also search a product by category of the product.</ul>
- <ul>He can delete a product.</ul>
- <ul>He can view all the queries and comments by using contact list option.</ul>
+ <ul>Admin can add a new product.</ul>
+ <ul>Admin can view a product and also search a product by category of the product.</ul>
+ <ul>Admin can delete a product.</ul>
+ <ul>Admin can view all the queries and comments by using contact list option.</ul>
  </li>
 </div>
 </div>

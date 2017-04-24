@@ -9,7 +9,7 @@ public class ShippingAddress {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
-	private String apartmentnumber;
+	private int apartmentnumber;
 	private String streetname;
 	private String city;
 	private String state;
@@ -21,10 +21,10 @@ public class ShippingAddress {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getApartmentnumber() {
+	public int getApartmentnumber() {
 		return apartmentnumber;
 	}
-	public void setApartmentnumber(String apartmentnumber) {
+	public void setApartmentnumber(int apartmentnumber) {
 		this.apartmentnumber = apartmentnumber;
 	}
 	public String getStreetname() {

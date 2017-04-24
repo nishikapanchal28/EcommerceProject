@@ -44,8 +44,8 @@ panel{
      <div class="panel-heading" style="background-color:DeepSkyBlue;">
   <center><B>LOGIN</B></center></div>
        <div class="panel-body">
-     <p1>${error}
-		${logout}
+     <p1><marquee>${error}</marquee>
+		<marquee>${logout}</marquee>
 		${registrationSuccess }</p1>
     <div class="form-group">
       <label class="control-label col-sm-2" for="username"></label>

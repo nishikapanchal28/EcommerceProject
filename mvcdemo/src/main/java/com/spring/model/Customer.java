@@ -9,11 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -35,7 +37,7 @@ public class Customer implements Serializable{
 	private String email;
 	@NotEmpty(message="enter phone number")
 	@Length(max=10, min=10)
-	private String phonenumber;
+	private int phonenumber;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	@Valid
@@ -52,6 +54,8 @@ public class Customer implements Serializable{
 	@JoinColumn(name="shippingaddress_id")
 	@Valid
 	private ShippingAddress shippingaddress;
+	@Transient
+	private MultipartFile personimg;
 	public int getId() {
 		return id;
 	}
@@ -76,10 +80,10 @@ public class Customer implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhonenumber() {
+	public int getPhonenumber() {
 		return phonenumber;
 	}
-	public void setPhonenumber(String phonenumber) {
+	public void setPhonenumber(int phonenumber) {
 		this.phonenumber = phonenumber;
 	}
 	public Users getUsers() {
@@ -106,6 +110,13 @@ public class Customer implements Serializable{
 	public void setShippingaddress(ShippingAddress shippingaddress) {
 		this.shippingaddress = shippingaddress;
 	}
+	public MultipartFile getPersonimg() {
+		return personimg;
+	}
+	public void setPersonimg(MultipartFile personimg) {
+		this.personimg = personimg;
+	}
+
 
 
 	}

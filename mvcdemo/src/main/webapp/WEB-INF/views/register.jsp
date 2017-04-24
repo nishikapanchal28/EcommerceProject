@@ -13,6 +13,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
+<script type="text/javascript">
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#image')
+                .attr('src', e.target.result)
+                 .width(150)
+                        .height(200);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function FillBilling(f) {
+	  if(f.billingtoo.checked == true) {
+	    f.billing_app.value = f.shipping_app.value;
+	   
+	  }
+	  if(f.billingtoo.checked == false) {
+
+          f.billing_app.value = '';
+
+	}
+}
+function validateEmail(email) {
+	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	  return re.test(email);
+	}
+
+	function validate() {
+	  $("#result").text("");
+	  var email = $("#email").val();
+	  if (validateEmail(email)) {
+	    $("#result").text(email + "is valid");
+	  
+	  } else {
+	    $("#result").text(email + " is not valid ");
+	    $("#result").css("color", "red");
+	  }
+	  return false;
+	}
+
+	$("#validate").bind("click", validate);
+	</script>
 <style>
 body{
 background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Photography-13.jpg");
@@ -22,7 +68,19 @@ background-image: url("resources/images/Mackenzie-Leather-Bags-Goods-Product-Pho
 }
 div.panel{
  
+    width: 900px;
       background: rgba(130,130,130,.3);
+}
+#image{
+  border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 0px;
+    background-color: lightblue;
+   
+   
+    
 }
 </style>
 
@@ -30,13 +88,17 @@ div.panel{
 <body>
 <div class="container">
 <div class="panel panel-default">
-<form:form action="registerdetails" commandName="customer" method="POST" class="form-horizontal">
+
+
+<form:form action="registerdetails" commandName="customer" method="POST"  enctype="multipart/form-data" class="form-horizontal">
 
  <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue">
   <center>YOUR PERSONAL DETAILS</center> </div>
        <div class="panel-body">
+      
 <div class="form-group">
+ 
       <label class="control-label col-sm-2" for="firstname"> FIRST NAME: </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="firstname" placeholder="Enter the first name"/>
@@ -53,7 +115,7 @@ div.panel{
     <div class="form-group">
       <label class="control-label col-sm-2" for="email"> EMAIL:</label>
       <div class="col-sm-10">
-        <form:input class="form-control" path="email"  placeholder="Enter email"/>
+        <form:input class="form-control" path="email"   id='email' placeholder="Enter email"/>
                   <form:errors path="lastname"></form:errors>
         
       </div>
@@ -65,6 +127,12 @@ div.panel{
                           <form:errors path="phonenumber"></form:errors>
         
       </div>
+    </div>
+    <div>
+      <label class="control-label col-sm-2" >PROFILE PICTURE:</label>
+    <input type='file' onchange="readURL(this);" /> <br>
+     <img id="image" src="#" alt="your image" />
+   
     </div>
     </div>
     </div>
@@ -129,13 +197,18 @@ div.panel{
         <form:input class="form-control" path="billingaddress.zipcode"  placeholder="Enter zipcode"/>
       </div>
       </div>
+     
     </div>
     </div>
+   
      <div class="panel panel-default">
      <div class="panel-heading" style="background-color:DeepSkyBlue">
      <center>SHIPPING ADDRESS DETAILS</center> </div>
         <div class="panel-body">
     <div class="form-group">
+      <br>
+<input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">
+<em>Check this box if Billing Address and Mailing Address are the same.</em>
       <label class="control-label col-sm-2" for="apartmentnumber">APARTMENT NUMBER:   </label>
       <div class="col-sm-10">
         <form:input class="form-control" path="shippingaddress.apartmentnumber"  placeholder="Enter apartment number"/>
@@ -175,7 +248,7 @@ div.panel{
 <div class="form-group">
       <label class="control-label col-sm-2"></label>
       <div class="col-sm-10">
-<input type="submit" value="SUBMIT" class="btn btn-info">
+<input type="submit" value="SUBMIT" class="btn btn-info" id='validate'>
 <input type="reset" value="RESET" class="btn btn-info">
 </div>
 </div>
