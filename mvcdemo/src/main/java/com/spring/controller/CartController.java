@@ -22,7 +22,7 @@ public class CartController {
 	@Autowired
 	private CartService cartservice;
 
-	/*@RequestMapping("/getCartId")
+	@RequestMapping("/getCartId")
 	public String getCartId(Model model) {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username = user.getUsername();
@@ -31,13 +31,13 @@ public class CartController {
 		int cartId = cart.getId();
 		model.addAttribute("cartId", cartId);
 		return "cart";
-	}*/
+	}
 
-	/*@RequestMapping("/getCart")
+	@RequestMapping("/getCart")
 	public Cart getCart(@PathVariable int cartId) {
 		Cart cart = cartservice.getCart(cartId);
 		return cart;
-	}*/
+	}
 @RequestMapping("/cart")
 	public String cart(){
 		return "cart";
